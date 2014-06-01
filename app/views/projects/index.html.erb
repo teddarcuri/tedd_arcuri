@@ -3,10 +3,11 @@
 <% @projects.each do |project| %>
 
 	<div class="project">
-		<%= project.id %>
-		<%= project.name %>
-		<%= project.languages %>
-		<%= project.description %>
+		<%= project.name %><br />
+		<%= project.languages %><br />
+		<%= project.description %><br />
+		<%= link_to("View This Project", project_path(:id => project.id)) %><br />
 	</div>
-	
+	<hr>
+
 <% end %>

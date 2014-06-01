@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TeddArcuri</title>
+  <title>Tedd Arcuri | Web Designer/Developer</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+<nav>
+	<ul>
+		<li><%= link_to "Home", root_path %></li>
+		<li><%= link_to "Me, The Person", {controller: "pages", action: "about"} %></li>
+		<li><%= link_to "My Work", projects_path %></li>
+		<li><%= link_to "Contact", {controller: "pages", action: "contact"} %></li>
+	</ul>
+</nav>
 
 <%= yield %>
 
