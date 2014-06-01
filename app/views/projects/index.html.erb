@@ -1,0 +1,12 @@
+<h1>My Work</h1>
+
+<% @projects.each do |project| %>
+
+	<div class="project">
+		<%= project.id %>
+		<%= project.name %>
+		<%= project.languages %>
+		<%= project.description %>
+	</div>
+	
+<% end %>
