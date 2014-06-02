@@ -1,13 +1,20 @@
-<h1>My Work</h1>
+<div class="container">
+	<h1>My Work</h1>
 
-<% @projects.each do |project| %>
+	<%= link_to "New Project", new_project_path, class: "button" %>
 
-	<div class="project">
-		<p><%= project.name %></p><br />
-		<p><%= project.languages %></p><br />
-		<p><%= project.description %></p><br />
-		<%= link_to("View This Project", project_path(:id => project.id)) %><br />
-	</div>
-	<hr>
+	<% @projects.each do |project| %>
 
-<% end %>
+		<div class="project">
+			<p><%= project.name %></p><br />
+			<p><%= project.languages %></p><br />
+			<p><%= project.description %></p><br />
+			<%= link_to("View This Project", project_path(:id => project.id)) %><br />
+			<%= link_to("Edit This Project", edit_project_path(:id => project.id)) %><br />
+		</div>
+		<hr>
+
+	<% end %>
+
+</div>
+	

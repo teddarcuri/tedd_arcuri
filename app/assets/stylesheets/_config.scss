@@ -1,0 +1,14 @@
+// Color Palette
+$slate: #0f0f0f;
+$salmon: #b45649;
+
+// Layout
+$nav-height: 85px;
+
+$max-width: 1200px;
+
+.container {
+	width: 100%; max-width: $max-width; 
+	height: auto;
+	margin: auto;
+}

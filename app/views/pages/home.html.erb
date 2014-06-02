@@ -1,5 +1,3 @@
-
-
 <!-- Hello, My Name Is -->
 <div class="hello">
 	<h1 class="headline"></h1>
@@ -10,8 +8,8 @@
 		<div class="call-to-action">
 			<span class="typed">I Design. I Code. I Solve Problems</span><br />
 			<center>
-			<a class="button">A little about me</a>
-			<a class="button">See my work</a>
+			<%= link_to "A Little About Me", pages_about_path, class: "button" %>
+			<%= link_to "See My Work", projects_path, class: "button" %>
 			</center>
 		</div>
 	</div>

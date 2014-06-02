@@ -5,16 +5,15 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <!-- Typekit Fonts -->
-<script type="text/javascript" src="//use.typekit.net/tdf6ubl.js"></script>
-<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
+  <script type="text/javascript" src="//use.typekit.net/tdf6ubl.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
   <%= csrf_meta_tags %>
 </head>
 <body>
 
 <nav>
-	<%= link_to image_tag("logo.svg", class: "logo"), root_path %>
+	<%= link_to " ", root_path, class: "logo" %>
 	<ul class="navigation">
 		<li><%= link_to "Me, The Person", {controller: "pages", action: "about"} %></li>
 		<li><%= link_to "My Work", projects_path %></li>
@@ -29,6 +28,8 @@
 </nav>
 
 <%= yield %>
+
+
 <script>
 
   	  $(".headline").fitText();

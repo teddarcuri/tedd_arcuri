@@ -18,7 +18,7 @@
 @import "bourbon";
 
 // Variables & Mixins
-@import "variables";
+@import "config";
 @import "mixins";
 
 //@import "typed";
@@ -48,6 +48,7 @@ nav {
     position: fixed;
     top: 0; left: 0;
     width: 100%; height: $nav-height;
+    background: rgba(15,15,15,0.9);
     @include flexbox();
     align-items: center;
     justify-content: flex-start;
@@ -55,17 +56,16 @@ nav {
 
 
 .logo {
-    height: 100%; width: $nav-height;
-    background: url(../images/logo.svg) no-repeat center center;
-    background-size: 50px;
+    height: 55px; width: 55px;
+    margin: 10px;
+    background: image-url("logo.svg") no-repeat center center;
+    background-size: 100%;
     border-radius: 200%;
     cursor: pointer;
-    border: solid 2px transparent;
     @include transition(all ease 0.5s);
     @include transform( translateY(0px) );
     &:hover {
         @include transform( translateY(-7px));
-        border: solid 3px $salmon;
     }
 }
 
@@ -116,12 +116,12 @@ ul.social {
 
 @each $social in twitter, github, linkedin {
   .#{$social} {
-    background: url(../images/#{$social}.svg) no-repeat center center;
+    background: image-url("#{$social}.svg") no-repeat center center;
     margin: 0px 10px;
     background-size: contain;
     cursor: pointer;
     &:hover {
-      background: url(../images/#{$social}mo.svg) no-repeat center center;
+      background: image-url("#{$social}mo.svg") no-repeat center center;
       background-size: contain;
     }
   }
