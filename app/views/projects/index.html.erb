@@ -3,7 +3,14 @@
 			<div class="showcase-close"><h3>X</h3></div>
 	</div>
 	<div class="sidebar">
-		
+		<h2>Project Overview</h2>
+		<hr>
+		<h2>Languages/Platforms</h2>
+		<hr>
+		<h2>Project info</h2>
+		<hr>
+		<h2>Project info</h2>
+		<hr>
 	</div>
 
 </div>
@@ -18,18 +25,19 @@
 	<a href="" class="button">Print</a>
 
 	<div class="projects-container">
+		<div class="project featured">
+			<div class="project-photo"></div>
+			<div class="toolbar">
+				<div class="view-project"></div>
+				<div>Featured Project</div>
+			</div>
+		</div>
 		<% @projects.each do |project| %>
 		<div class="project">
 			<div class="project-photo"></div>
-			<p class="project-name"><%= project.name %></p><br />
-			<p><%= project.languages %></p><br />
-			<p><%= project.description %></p><br />
-			<%= link_to("View This Project", project_path(:id => project.id)) %><br />
-			<%= link_to("Edit This Project", edit_project_path(:id => project.id)) %><br />
-			<%= link_to("Delete This Project", project_path(:id => project.id), method: :delete) %><br />
 			<div class="toolbar">
-				<div></div>
 				<div class="view-project"></div>
+				<div><%= project.name %></div>
 			</div>
 		</div>
 		<% end %>

@@ -24,10 +24,11 @@
 @import "fonts";
 
 // Page Specific Styles
-@import "projects";
+@import "pages";
 
 // Global structures
 *, *:before, *:after {
+    color: #fff;
     @include box-sizing(border-box);
 }
 
@@ -48,7 +49,7 @@ nav {
     position: fixed;
     top: 0; left: 0;
     width: 100%; height: $nav-height;
-    background: rgba(15,15,15,0.9);
+    //background: rgba(15,15,15,0.9);
     z-index: $z-nav;
     @include display(flex);
     @include align-items(center);
@@ -75,11 +76,6 @@ ul.navigation {
     @include flexbox();
     align-items: center;
     flex-grow: 1;
-
-    @include bp(beta) {
-        display: none;
-    }
-
     li {
         height: 100%;
         top: 0px;
@@ -106,12 +102,8 @@ ul.social {
     align-items: center;
     padding-right: 10px;
 
-    @include bp(beta) {
-        display: none;
-    }
-
     li {
-        padding: 15px;
+        padding: 12px;
     }
 }
 

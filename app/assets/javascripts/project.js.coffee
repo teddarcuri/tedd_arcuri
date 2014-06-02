@@ -4,7 +4,7 @@
 
 # Turbolink workaround
 ready = ->
-	$(".view-project").on "click", ->
+	$(".toolbar div").on "click", ->
 		$(".showcase").removeClass("showcase-hide")
 
 	$(".showcase-close").on "click", ->
