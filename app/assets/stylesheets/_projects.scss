@@ -1,0 +1,15 @@
+.project-container {
+	@include display(flex);
+	@include flex-wrap(wrap);
+	@include justify-content(space-between);
+	@include align-items(stretch);
+	@include align-content(space-around);
+}
+
+.project {
+	width: 30%;
+	padding: 20px;
+	margin-bottom: 30px;
+	border-radius: 5px;
+	background: lighten($slate, 5%);
+}

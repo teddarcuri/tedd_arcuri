@@ -1,10 +1,14 @@
 <div class="container">
 	<h1>My Work</h1>
-
+	<hr>
 	<%= link_to "New Project", new_project_path, class: "button" %>
 
-	<% @projects.each do |project| %>
+	<a href="" class="button">Web</a>
+	<a href="" class="button">Logo</a>
+	<a href="" class="button">Print</a>
 
+	<div class="project-container">
+		<% @projects.each do |project| %>
 		<div class="project">
 			<p><%= project.name %></p><br />
 			<p><%= project.languages %></p><br />
@@ -12,9 +16,9 @@
 			<%= link_to("View This Project", project_path(:id => project.id)) %><br />
 			<%= link_to("Edit This Project", edit_project_path(:id => project.id)) %><br />
 		</div>
-		<hr>
-
-	<% end %>
+		<% end %>
+	</div>
+	
 
 </div>
 	

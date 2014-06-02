@@ -20,11 +20,11 @@
 // Variables & Mixins
 @import "config";
 @import "mixins";
-
-//@import "typed";
-
 // Fonts
 @import "fonts";
+
+// Page Specific Styles
+@import "projects";
 
 // Global structures
 *, *:before, *:after {
