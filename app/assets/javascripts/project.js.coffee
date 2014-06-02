@@ -2,9 +2,13 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-$ ->
-	$(".showcase-view").on "click", ->
+# Turbolink workaround
+ready = ->
+	$(".view-project").on "click", ->
 		$(".showcase").removeClass("showcase-hide")
 
 	$(".showcase-close").on "click", ->
 		$(".showcase").addClass("showcase-hide")
+
+$(document).ready(ready)
+$(document).on('page:load', ready)

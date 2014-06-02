@@ -4,16 +4,15 @@ $salmon: #b45649;
 
 // Layout
 $nav-height: 85px;
-
 $max-width: 1200px;
+$border-radius: 5px;
 
 // Z-Index
-
 $z-modal: 1000;
 $z-nav: 999;
 
 .container {
-	width: 100%; max-width: $max-width; 
+	width: 95%;
 	height: auto;
 	margin: auto;
 }

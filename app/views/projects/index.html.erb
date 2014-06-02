@@ -1,14 +1,16 @@
 <div class="showcase showcase-hide">
-	<div class="gallery"><h1>Gallery</h1></div>
-	<div class="sidebar"><h1>Sidebar</h1></div>
+	<div class="gallery">
+			<div class="showcase-close"><h3>X</h3></div>
+	</div>
+	<div class="sidebar">
+		
+	</div>
 
-	<div class="showcase-close"></div>
 </div>
 
 
 <div class="container">
 	<h1>My Work</h1>
-	<hr>
 	<%= link_to "New Project", new_project_path, class: "button" %>
 
 	<a href="" class="button">Web</a>
@@ -24,7 +26,11 @@
 			<p><%= project.description %></p><br />
 			<%= link_to("View This Project", project_path(:id => project.id)) %><br />
 			<%= link_to("Edit This Project", edit_project_path(:id => project.id)) %><br />
-			<div class="showcase-view">View dis</div>
+			<%= link_to("Delete This Project", project_path(:id => project.id), method: :delete) %><br />
+			<div class="toolbar">
+				<div></div>
+				<div class="view-project"></div>
+			</div>
 		</div>
 		<% end %>
 	</div>
