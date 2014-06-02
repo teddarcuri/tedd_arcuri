@@ -35,6 +35,7 @@ body {
     font-family: 'proxima-nova', sans-serif;
     background: $slate;
     font-size: 18px;
+    margin-top: $nav-height + 10px;
     @include bp(1400) {
         font-size: 16px;
     }
@@ -45,6 +46,7 @@ body {
 
 nav {
     position: fixed;
+    top: 0; left: 0;
     width: 100%; height: $nav-height;
     @include flexbox();
     align-items: center;
@@ -91,7 +93,6 @@ ul.navigation {
             margin: 0px 20px;
             border-bottom: solid 2px transparent;
             &:hover {
-                border-radius: 20px;
                 border-bottom: solid 2px $salmon;
             }
         }

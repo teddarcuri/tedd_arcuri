@@ -3,9 +3,9 @@
 <% @projects.each do |project| %>
 
 	<div class="project">
-		<%= project.name %><br />
-		<%= project.languages %><br />
-		<%= project.description %><br />
+		<p><%= project.name %></p><br />
+		<p><%= project.languages %></p><br />
+		<p><%= project.description %></p><br />
 		<%= link_to("View This Project", project_path(:id => project.id)) %><br />
 	</div>
 	<hr>

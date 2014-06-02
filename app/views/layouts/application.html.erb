@@ -14,8 +14,8 @@
 <body>
 
 <nav>
+	<%= link_to image_tag("logo.svg", class: "logo"), root_path %>
 	<ul class="navigation">
-		<%= link_to image_tag("logo.svg", class: "logo"), root_path %>
 		<li><%= link_to "Me, The Person", {controller: "pages", action: "about"} %></li>
 		<li><%= link_to "My Work", projects_path %></li>
 		<li><%= link_to "Contact", {controller: "pages", action: "contact"} %></li>
