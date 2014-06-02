@@ -1,0 +1,37 @@
+/////////////////////////////
+// Flexbox
+////////////////////////////
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+/////////////////////////////
+// Box Sizing
+////////////////////////////
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing: $box-model; // Safari <= 5
+     -moz-box-sizing: $box-model; // Firefox <= 19
+          box-sizing: $box-model;
+}
+
+/////////////////////////////
+// Mixins
+////////////////////////////
+@mixin bp($point) {
+  @if $point == alpha {
+    @media (max-width: 1200px) { @content; }
+  }
+  @else if $point == beta {
+    @media (max-width: 1024px) { @content; }
+  }
+  @else if $point == charlie {
+    @media (max-width: 650px)  { @content; }
+  }
+  @else {
+    @media (max-width: $point + "px")  { @content; }
+  }
+}

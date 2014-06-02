@@ -1,0 +1,44 @@
+h1 {
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+// Semantic Type
+.headline {
+    font-size: 10em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.typed {
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: left !important;
+}
+
+.button {
+    color: #fff;
+    border: solid 3px $salmon;
+    border-radius: 5px;
+    padding: 15px 35px;
+    line-height: 7em;
+    margin-right: 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+    &:hover {
+        background: $salmon;
+    }
+    @include bp(alpha) {
+        font-size: 0.8em;
+    }
+    @include bp(beta) {
+        display: block;
+        line-height: 2em;
+        margin: 15px 0px;
+    }
+}

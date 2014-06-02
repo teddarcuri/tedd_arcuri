@@ -1,0 +1,187 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ */
+
+// Meyer CSS reset
+@import "reset";
+
+// Bourbon Library
+@import "bourbon";
+
+// Variables & Mixins
+@import "variables";
+@import "mixins";
+
+//@import "typed";
+
+// Fonts
+@import "fonts";
+
+// Global structures
+*, *:before, *:after {
+    @include box-sizing(border-box);
+}
+
+body {
+    font-family: 'proxima-nova', sans-serif;
+    background: $slate;
+    font-size: 18px;
+    @include bp(1400) {
+        font-size: 16px;
+    }
+    @include bp(900) {
+        font-size: 14px;
+    }
+}
+
+nav {
+    position: fixed;
+    width: 100%; height: $nav-height;
+    @include flexbox();
+    align-items: center;
+    justify-content: flex-start;
+} // End Nav
+
+
+.logo {
+    height: 100%; width: $nav-height;
+    background: url(../images/logo.svg) no-repeat center center;
+    background-size: 50px;
+    border-radius: 200%;
+    cursor: pointer;
+    border: solid 2px transparent;
+    @include transition(all ease 0.5s);
+    @include transform( translateY(0px) );
+    &:hover {
+        @include transform( translateY(-7px));
+        border: solid 3px $salmon;
+    }
+}
+
+ul.navigation {
+    height: 100%;
+    @include flexbox();
+    align-items: center;
+    flex-grow: 1;
+
+    @include bp(beta) {
+        display: none;
+    }
+
+    li {
+        height: 100%;
+        top: 0px;
+        @include flexbox();
+        align-items: center;
+
+        a {
+            font-size: 1em;
+            display: inline-block;
+            color: #fff;
+            padding: 20px;
+            margin: 0px 20px;
+            border-bottom: solid 2px transparent;
+            &:hover {
+                border-radius: 20px;
+                border-bottom: solid 2px $salmon;
+            }
+        }
+    }
+} // End ul.navigation
+
+ul.social {
+    height: 100%;
+    @include flexbox();
+    align-items: center;
+    padding-right: 10px;
+
+    @include bp(beta) {
+        display: none;
+    }
+
+    li {
+        padding: 15px;
+    }
+}
+
+@each $social in twitter, github, linkedin {
+  .#{$social} {
+    background: url(../images/#{$social}.svg) no-repeat center center;
+    margin: 0px 10px;
+    background-size: contain;
+    cursor: pointer;
+    &:hover {
+      background: url(../images/#{$social}mo.svg) no-repeat center center;
+      background-size: contain;
+    }
+  }
+}
+
+// HELLO MY NAME IS
+.hello {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding-left: 50px;
+    @include bp(beta) {
+        width: 90%;
+        position: relative;
+        margin: auto;
+        padding: 0px;
+        text-align: center;
+        top: $nav-height + 40;
+    }
+}
+
+.bottom-portion {
+    width: 100%; height: 100%;
+    position: relative;
+    @include flexbox();
+    align-items: flex-end;
+    @include bp(beta) {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.name-container {
+    width: 50%;
+    @include bp(beta) {
+        width: 100%;
+    }
+}
+
+.name {
+    color: $salmon;
+    text-transform: uppercase;
+    font-size: 20em;
+    font-weight: 700;
+
+    .me-with-e {
+        width: 47%;
+        margin: 4.5% -14% 0 -14%;
+        vertical-align: top;
+    }
+}
+
+.call-to-action {
+    @include flexbox();
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 50px;
+    width: 50%; height: 100%;
+    position: relative;
+    @include bp(beta) {
+        width: 100% !important;
+    }
+}

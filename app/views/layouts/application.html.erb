@@ -4,20 +4,43 @@
   <title>Tedd Arcuri | Web Designer/Developer</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <!-- Typekit Fonts -->
+<script type="text/javascript" src="//use.typekit.net/tdf6ubl.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+
   <%= csrf_meta_tags %>
 </head>
 <body>
 
 <nav>
-	<ul>
-		<li><%= link_to "Home", root_path %></li>
+	<ul class="navigation">
+		<%= link_to image_tag("logo.svg", class: "logo"), root_path %>
 		<li><%= link_to "Me, The Person", {controller: "pages", action: "about"} %></li>
 		<li><%= link_to "My Work", projects_path %></li>
 		<li><%= link_to "Contact", {controller: "pages", action: "contact"} %></li>
 	</ul>
+
+	<ul class="social">
+		<li class="social-icon github"></li>
+		<li class="social-icon twitter"></li>
+		<li class="social-icon linkedin"></li>
+	</ul>
 </nav>
 
 <%= yield %>
+<script>
 
+  	  $(".headline").fitText();
+	  $(".name").fitText(0.3);
+
+		$(function(){
+		    $(".headline").typed({
+		    	strings: ["Hello, my name is"],
+		    	typeSpeed: 100
+		    });
+		});
+
+	</script>
 </body>
 </html>
