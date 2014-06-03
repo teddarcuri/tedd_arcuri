@@ -1,5 +1,6 @@
 h1 {
     font-size: 3em;
+    font-weight: 700;
     color: #fff;
 }
 
@@ -30,10 +31,10 @@ a {
 
 .typed {
     color: #fff;
-    font-size: 1.5em;
+    font-size: 1.25em;
     font-weight: 700;
+    letter-spacing: 7px;
     text-transform: uppercase;
-    text-align: left !important;
 }
 
 .button {
@@ -52,7 +53,7 @@ a {
     @include bp(alpha) {
         font-size: 0.8em;
     }
-    @include bp(beta) {
+    @include bp(charlie) {
         display: block;
         line-height: 2em;
         margin: 15px 0px;

@@ -1,25 +1,37 @@
-<div class="showcase showcase-hide">
+<div class="message-box"></div>
+
+<div class="showcase project-showcase showcase-hide">
 	<div class="gallery">
-			<div class="showcase-close"><h3>X</h3></div>
+		<div class="showcase-close"><h3>X</h3></div>
 	</div>
 	<div class="sidebar">
 		<h2>Project Overview</h2>
+		<ul>
+			<li>list item</li>
+			<li>list item</li>
+			<li>list item</li>
+		</ul>
 		<hr>
 		<h2>Languages/Platforms</h2>
+		<ul>
+			<li>list item</li>
+			<li>list item</li>
+		</ul>
 		<hr>
-		<h2>Project info</h2>
-		<hr>
-		<h2>Project info</h2>
+		<h2>Key Features</h2>
+		<ul>
+			<li>list item</li>
+			<li>list item</li>
+			<li>list item</li>
+		</ul>
 		<hr>
 	</div>
 
 </div>
 
-
 <div class="container">
 	<h1>My Work</h1>
-	<%= link_to "New Project", new_project_path, class: "button" %>
-
+	<a class="button admin-showcase-toggle">New Project</a>
 	<a href="" class="button">Web</a>
 	<a href="" class="button">Logo</a>
 	<a href="" class="button">Print</a>
@@ -33,14 +45,34 @@
 			</div>
 		</div>
 		<% @projects.each do |project| %>
-		<div class="project">
+		<div id="<%= dom_id(project) %>" class="project">
 			<div class="project-photo"></div>
 			<div class="toolbar">
-				<div class="view-project"></div>
-				<div><%= project.name %></div>
+				<a class="view-project"></a>
+				<a><%= project.name %></a>
+				<%= link_to "", project_path(:id => project.id), method: :delete, :class => "delete-project" %>
 			</div>
 		</div>
 		<% end %>
 	</div>
 </div>
 	
+<div class="showcase admin-showcase showcase-hide">
+
+	<h1>New Project</h1>
+
+	<%= form_for :project, url: projects_path do |f| %>
+
+		<h2>Name</h2>
+		<%= f.text_field :name %><br />
+		<h2>Languages</h2>
+		<%= f.text_field :languages %><br />
+		<h2>Description</h2>
+		<%= f.text_area :description %><br />
+
+		<%= f.submit("Create a project") %>
+
+	<% end %>
+
+	<div class="showcase-close"><h3>X</h3></div>
+</div>	

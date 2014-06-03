@@ -1,6 +1,47 @@
+.left-panel {
+	width: 50%; height: 100%;
+	background: image-url("me-scene.jpg") no-repeat left center;
+	background-size: cover;
+	position: absolute;
+	top: 0; left: 0;
+	@include bp(alpha) {
+		background: image-url("me-scene.jpg") no-repeat center center;
+		background-size: cover;
+		width: 100%;
+		position: relative;
+		height: 400px;
+	}
+	@include bp(charlie) {
+		background: image-url("me-scene.jpg") no-repeat left center;
+		background-size: cover;
+	}
+}
+
 .right-panel {
 	width: 50%; height: 100%;
 	background: $salmon;
 	position: absolute;
 	top: 0; right: 0;
+	padding: 20px 0px;
+	@include bp(alpha) {
+		width: 100%;
+		position: relative;
+		height: auto;
+
+	}
+
+	h1 {
+		color: darken($salmon, 10%);
+		margin: 20px;
+	}
+	h2 {
+		margin: 20px;
+	}
+
+	ul {
+		background: darken($salmon, 10%);
+			li {
+				padding: 10px;
+			}
+	}
 }

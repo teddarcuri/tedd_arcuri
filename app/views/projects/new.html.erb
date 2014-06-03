@@ -3,7 +3,11 @@
 
 	<%= form_for :project, url: projects_path do |f| %>
 
+		<h2>Name</h2>
 		<%= f.text_field :name %><br />
+		<h2>Languages</h2>
+		<%= f.text_field :languages %><br />
+		<h2>Description</h2>
 		<%= f.text_area :description %><br />
 
 		<%= f.submit("Create a project") %>

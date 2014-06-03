@@ -31,7 +31,7 @@
 		overflow: hidden;
 		border-radius: 0px 0px $border-radius $border-radius;
 		@include display(flex);
-		div {
+		a {
 			cursor: pointer;
 			height: 100%;
 			padding: 0 40px;
@@ -44,6 +44,14 @@
 				&:hover {
 					background: image-url("eyemo.svg") no-repeat center center darken($salmon, 10%);
 					background-size: 30px;
+				}
+			}
+			&.delete-project {
+				background: image-url("trash.svg") no-repeat center center;
+				background-size: 15px;
+				&:hover {
+					background: image-url("trashmo.svg") no-repeat center center darken($salmon, 10%);
+					background-size: 15px;
 				}
 			}
 		}
@@ -63,6 +71,10 @@
 	background: rgba(0,0,0,0.8);
 	z-index: $z-modal;
 	@include transition(all ease 0.5s);
+}
+
+.admin-showcase {
+	padding: 100px;
 }
 
 .showcase-hide {
