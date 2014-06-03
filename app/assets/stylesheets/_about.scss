@@ -23,6 +23,7 @@
 	position: absolute;
 	top: 0; right: 0;
 	padding: 20px 0px;
+	overflow: auto;
 	@include bp(alpha) {
 		width: 100%;
 		position: relative;
@@ -46,11 +47,11 @@
 		background-size: 10px;
 		margin: 20px 0px 0px 0px;
 		&:hover {
-			background: image-url("arrow.svg") no-repeat 10px center lighten($slate, 10%);
+			background: image-url("arrow.svg") no-repeat 10px center darken($salmon, 10%);
 			background-size: 10px;
 		}
 		&.active {
-			background: image-url("arrow-active.svg") no-repeat 10px center lighten($slate, 10%);
+			background: image-url("arrow-active.svg") no-repeat 10px center darken($salmon, 7%);
 			background-size: 10px;
 		}
 	}
