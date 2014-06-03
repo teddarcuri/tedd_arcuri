@@ -30,18 +30,42 @@
 
 	}
 
+	hr {
+		border: solid 1px darken($salmon, 10%);
+	}
+
 	h1 {
 		color: darken($salmon, 10%);
 		margin: 20px;
 	}
 	h2 {
-		margin: 20px;
+		font-size: 1.2em;
+		padding: 20px 0px 20px 30px;
+		cursor: pointer;
+		background: image-url("arrow.svg") no-repeat 10px center;
+		background-size: 10px;
+		margin: 20px 0px 0px 0px;
+		&:hover {
+			background: image-url("arrow.svg") no-repeat 10px center lighten($slate, 10%);
+			background-size: 10px;
+		}
+		&.active {
+			background: image-url("arrow-active.svg") no-repeat 10px center lighten($slate, 10%);
+			background-size: 10px;
+		}
 	}
 
-	ul {
-		background: darken($salmon, 10%);
+	section {
+		ul {
+			display: none;
+			background: darken($salmon, 10%);
+			padding: 20px;
+
 			li {
-				padding: 10px;
+				padding: 10px 0px;
 			}
+		}
 	}
+
+	
 }

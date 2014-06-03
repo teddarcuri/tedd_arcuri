@@ -2,4 +2,12 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
+ready = ->
+	$("section.about h2").click ->
+		$(this).siblings("ul").slideToggle()
+		$(this).toggleClass("active")
 
+
+# Turbolink workaround
+$(document).ready(ready)
+$(document).on('page:load', ready)
