@@ -41,18 +41,21 @@
 	}
 	h2 {
 		font-size: 1.2em;
-		padding: 20px 0px 20px 30px;
+		padding: 20px 0px 20px 40px;
 		cursor: pointer;
-		background: image-url("arrow.svg") no-repeat 10px center;
+		background: image-url("arrow.svg") no-repeat 15px center;
 		background-size: 10px;
 		margin: 20px 0px 0px 0px;
+		@include transition(all ease 0.2s);
 		&:hover {
-			background: image-url("arrow.svg") no-repeat 10px center darken($salmon, 10%);
+			background: image-url("arrow.svg") no-repeat 20px center darken($salmon, 10%);
 			background-size: 10px;
+			@include transition(all ease 0.2s);
 		}
 		&.active {
-			background: image-url("arrow-active.svg") no-repeat 10px center darken($salmon, 7%);
+			background: image-url("arrow-active.svg") no-repeat 15px center darken($salmon, 7%);
 			background-size: 10px;
+			@include transition(all ease 0.2s);
 		}
 	}
 

@@ -5,7 +5,7 @@ module ApplicationHelper
 	end
 
 	def current_user_id
-		session[:user_id].to_i
+		session[:user_id]
 	end
 
 end

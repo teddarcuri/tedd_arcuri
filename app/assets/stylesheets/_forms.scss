@@ -1,4 +1,4 @@
-input {
+input[type="text"], input[type="password"], input[type="number"], input[type="submit"] {
 	width: 100%;
 	color: lighten($slate, 80%);
 	background: lighten($slate, 15%);
