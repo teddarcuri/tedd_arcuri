@@ -15,6 +15,9 @@ ready = ->
 	$(".showcase-close").on "click", ->
 		$(".showcase").addClass("showcase-hide")
 
+	#notices
+	$(".notice").animate({"top" : 0}, 1000).delay(4000).animate({"top" : -100}, 1000)
+
 # Turbolink workaround
 $(document).ready(ready)
 $(document).on('page:load', ready)

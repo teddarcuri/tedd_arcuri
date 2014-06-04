@@ -4,6 +4,8 @@ TeddArcuri::Application.routes.draw do
   get "pages/contact"
   get "project/index"
 
+  get "login", :to => "user_sessions#new"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -11,6 +11,17 @@ $border-radius: 15px;
 $z-modal: 1000;
 $z-nav: 999;
 
+// Flash notices
+
+.notice {
+	position: fixed;
+	top: -100px; left: 0;
+	width: 100%;
+	background: $salmon;
+	padding: 20px;
+	z-index: $z-modal;
+}
+
 .container {
 	width: 95%;
 	height: auto;

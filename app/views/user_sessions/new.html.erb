@@ -1,10 +1,15 @@
-<h1>Log In</h1>
-<%= form_tag user_sessions_path do %>
+<div class="container">
+	<h1>Log In</h1>
+	<br />
+	<%= form_tag user_sessions_path do %>
 
-	<%= text_field_tag :username, params[:username] %>
+		<%= label_tag :username %><br />
+		<%= text_field_tag :username, params[:username] %><br />
 
-	<%= password_field_tag :password %>
+		<%= label_tag :password %><br />
+		<%= password_field_tag :password %><br />
 
-	<%= submit_tag "Log In" %>
+		<%= submit_tag "Log In" %>
 
-<% end %>
+	<% end %>	
+</div>

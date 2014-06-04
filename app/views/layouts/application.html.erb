@@ -13,7 +13,9 @@
 <body>
 
 <% if !flash[:success].blank? %>
-	<%= flash[:success] %>
+	<div class="notice success">
+		<%= flash[:success] %>
+	</div>	
 <% end %>
 
 <nav>
@@ -24,8 +26,6 @@
 		<li><%= link_to "Contact", {controller: "pages", action: "contact"} %></li>
 		<% if logged_in %>
 		<li><%= link_to "Logout", user_session_path(id: current_user_id), method: :delete %></li>
-		<% else %>
-		<li><%= link_to "Login", {controller: "user_sessions", action: "new"} %></li>
 		<% end %>
 	</ul>
 
