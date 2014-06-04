@@ -1,4 +1,7 @@
 TeddArcuri::Application.routes.draw do
+  get "user_sessions/new"
+  get "user_sessions/create"
+  get "users/new"
   get "pages/home"
   get "pages/about"
   get "pages/contact"
@@ -20,6 +23,8 @@ TeddArcuri::Application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
       resources :projects
+      resources :users
+      resources :user_sessions, only: [:new, :create]
 
   # Example resource route with options:
   #   resources :products do

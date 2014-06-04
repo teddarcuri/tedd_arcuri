@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140603235651) do
+ActiveRecord::Schema.define(version: 20140604031545) do
 
   create_table "projects", force: true do |t|
     t.string   "name"
@@ -25,5 +25,14 @@ ActiveRecord::Schema.define(version: 20140603235651) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
   end
+
+  create_table "users", force: true do |t|
+    t.string   "username"
+    t.string   "password_digest"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "users", ["username"], name: "index_users_on_username", using: :btree
 
 end

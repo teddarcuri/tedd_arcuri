@@ -34,7 +34,10 @@
 	<div class="control-bar">
 		<h1>My Work</h1>
 		<div class="controls">
-			<a class="button admin-showcase-toggle">New Project</a>
+			<% if logged_in %>
+				<!-- If user is logged in -->
+				<a class="button admin-showcase-toggle">Create A New Project</a>
+			<% end %>
 			<a href="" class="button">Web</a>
 			<a href="" class="button">Logo</a>
 			<a href="" class="button">Print</a>
@@ -62,8 +65,11 @@
 			<div class="toolbar">
 				<a class="view-project"></a>
 				<a><%= project.name %></a>
-				<%= link_to "Edit", edit_project_path(:id => project.id) %>
-				<%= link_to "", project_path(:id => project.id), method: :delete, :class => "delete-project" %>
+				<% if logged_in %>
+					<!-- IF user is logged in -->
+					<%= link_to "Edit", edit_project_path(:id => project.id) %>
+					<%= link_to "", project_path(:id => project.id), method: :delete, :class => "delete-project" %>
+				<% end %>
 			</div>
 		</div>
 		<% end %>
