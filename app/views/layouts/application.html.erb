@@ -3,7 +3,6 @@
 <head>
   <title>Tedd Arcuri | Web Designer/Developer</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <!-- Typekit Fonts -->
   <script type="text/javascript" src="//use.typekit.net/tdf6ubl.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
@@ -22,10 +21,9 @@
 
 <%= yield %>
 
-
 <%= render 'layouts/login' %>
 
-
+<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 <script>
   	  $(".headline").fitText();
 	  $(".name").fitText(0.3);
@@ -37,6 +35,6 @@
 		    });
 		});
 
-	</script>
+</script>
 </body>
 </html>
