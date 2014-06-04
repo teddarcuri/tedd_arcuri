@@ -1,7 +1,4 @@
 TeddArcuri::Application.routes.draw do
-  get "user_sessions/new"
-  get "user_sessions/create"
-  get "users/new"
   get "pages/home"
   get "pages/about"
   get "pages/contact"
@@ -24,7 +21,7 @@ TeddArcuri::Application.routes.draw do
   #   resources :products
       resources :projects
       resources :users
-      resources :user_sessions, only: [:new, :create]
+      resources :user_sessions
 
   # Example resource route with options:
   #   resources :products do
