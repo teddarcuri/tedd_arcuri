@@ -187,6 +187,7 @@
 	}
 
 	section {
+		position: relative;
 		ul {
 			display: none;
 			background: lighten($slate, 10%);

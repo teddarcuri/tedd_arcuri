@@ -1,7 +1,7 @@
 class ProjectsController < ApplicationController
 
   def index
-  	@projects = Project.all
+  	@projects = Project.ordered
 
   end
 
@@ -47,7 +47,7 @@ class ProjectsController < ApplicationController
 
   private	
 	  def project_params
-	  	  params.require(:project).permit(:name, :description, :kind, :image, :remove_image)
+	  	  params.require(:project).permit(:name, :description, :kind, :order, :image, :remove_image)
 	  end
 
 end
