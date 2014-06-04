@@ -39,8 +39,7 @@
 			<a href="" class="button">Logo</a>
 			<a href="" class="button">Print</a>
 		</div>
-	</div>
-	
+	</div> 
 
 	<div class="projects-container">
 		<!-- <div class="project featured">
@@ -53,12 +52,11 @@
 
 		<% @projects.each do |project| %>
 		<div id="<%= dom_id(project) %>" class="project">
-			<div class="project-photo" style="background: url(<%= project.image.url %>) no-repeat top center">
+			<div class="project-photo" style="background: url(<%= project.image.url %>) no-repeat center center">
 				<div class="project-info">
 					<h2><%= project.name %></h2>
 					<hr>
 					<p><%= project.description %></p>
-					<%= link_to "View More", projects_path, class: "button" %>
 				</div>
 			</div>
 			<div class="toolbar">
