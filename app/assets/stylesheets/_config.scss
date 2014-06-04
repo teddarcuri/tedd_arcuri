@@ -26,6 +26,22 @@ $z-nav: 999;
 	width: 95%;
 	height: auto;
 	margin: auto;
+	&.form {
+		max-width: 600px;
+		background: darken($slate, 1%);
+		padding: 70px 40px;
+	}
+}
+
+.login-btn {
+	border: solid 2px $salmon;
+	background: transparent;
+	border-radius: 5px;
+	color: #fff;
+	cursor: pointer;
+	&:hover {
+		background: $salmon;
+	}
 }
 
 // Typed

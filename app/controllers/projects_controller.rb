@@ -17,7 +17,7 @@ class ProjectsController < ApplicationController
   	@project = Project.new(project_params)
 
   	if @project.save
-      flash[:success] = "Wow, you made a project!"
+      flash[:success] = "You successfully created #{@project.name}!"
   		redirect_to(:action => "index")
   	else
   		render('new')
@@ -41,13 +41,13 @@ class ProjectsController < ApplicationController
   def destroy
     project = Project.find(params[:id])
     project.destroy
-    flash[:success] = "Wow, you deleteeed a project!"
+    flash[:success] = "You successfully deleted the project: #{project.name}"
     redirect_to(:action => "index")
   end
 
   private	
 	  def project_params
-	  	  params.require(:project).permit(:name, :description, :image, :remove_image)
+	  	  params.require(:project).permit(:name, :description, :kind, :image, :remove_image)
 	  end
 
 end

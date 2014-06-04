@@ -7,7 +7,7 @@ class UserSessionsController < ApplicationController
   	user = User.find_by(username: params[:username])
   	if user && user.authenticate(params[:password])
   		session[:user_id] = user.id
-  		flash[:success] = "Thank you for logging in #{user.username}!"
+  		flash[:success] = "You have been logged in as #{user.username}!"
   		redirect_to projects_path
   	else
   		render action: 'new'

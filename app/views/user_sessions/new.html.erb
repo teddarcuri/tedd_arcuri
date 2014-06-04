@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container form">
 	<h1>Log In</h1>
 	<br />
 	<%= form_tag user_sessions_path do %>
@@ -9,7 +9,7 @@
 		<%= label_tag :password %><br />
 		<%= password_field_tag :password %><br />
 
-		<%= submit_tag "Log In" %>
+		<%= submit_tag "Log In", class: "login-btn" %>
 
 	<% end %>	
 </div>
