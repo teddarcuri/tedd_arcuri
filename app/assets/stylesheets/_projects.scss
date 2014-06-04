@@ -39,6 +39,7 @@
 	margin-bottom: 30px;
 	overflow: hidden;
 	border-radius: $border-radius;
+	cursor: pointer;
 	background: lighten($slate, 5%);
 	@include bp(1400){ width: 30%; }
 	@include bp(beta){ width: 48%; }
@@ -48,6 +49,13 @@
 		@include bp(1400){ width: 65%; }
 		@include bp(beta){ width: 100%; }
 		@include bp(600){ width: 98%; }
+	}
+	&:hover {
+		.view-project {
+			@include transition(all ease 0.5s);
+			background: image-url("eyemo.svg") no-repeat center center darken($salmon, 10%) !important;
+			background-size: 30px !important;
+		}
 	}
 
 	.toolbar {
@@ -64,10 +72,10 @@
 			line-height: 2.75em;
 			color: #aaa;
 			&.view-project {
-				background: image-url("eye.svg") no-repeat center center;
+				background: image-url("eyemo.svg") no-repeat center center;
 				background-size: 30px;
 				&:hover {
-					background: image-url("eyemo.svg") no-repeat center center darken($salmon, 10%);
+					background: image-url("eye.svg") no-repeat center center lighten($slate, 10%);
 					background-size: 30px;
 				}
 			}

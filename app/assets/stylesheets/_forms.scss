@@ -1,12 +1,24 @@
 input {
 	width: 100%;
-	color: #444;
+	color: lighten($slate, 80%);
 	background: lighten($slate, 15%);
 	outline: none;
 	border: none;
 	font-size: 1em;
 	height: 50px;
 	margin: 15px 0px;
+	padding: 0px 10px;
+	border-radius: $border-radius / 2 ;
+	&.login-btn {
+		border: solid 2px $salmon;
+		background: transparent;
+		border-radius: 5px;
+		color: #fff;
+		cursor: pointer;
+		&:hover {
+			background: $salmon;
+		}
+	}
 }
 
 textarea {
@@ -14,4 +26,6 @@ textarea {
 	background: lighten($slate, 15%);
 	outline: none;
 	border: none;
+	color: lighten($slate, 80%);
+	font-size: 1em;
 }

@@ -63,10 +63,10 @@
 		<div id="<%= dom_id(project) %>" class="project">
 			<div class="project-photo" style="background: url(<%= project.image.url %>) no-repeat center center">
 				<div class="project-info">
-					<h2>Name: <%= project.name %></h2>
+					<h2><%= project.name %></h2>
 					<hr>
 					<a>Type: <%= project.kind %></a>
-					<p>Description: <%= project.description %></p>
+					<p><%= project.description %></p>
 				</div>
 			</div>
 			<div class="toolbar">
@@ -100,7 +100,7 @@
 		<h2>Upload file</h2>
 		<%= f.file_field :image %>
 
-		<%= f.submit("Create a project") %>
+		<%= f.submit("Create a project", :class => "login-btn") %>
 
 	<% end %>
 

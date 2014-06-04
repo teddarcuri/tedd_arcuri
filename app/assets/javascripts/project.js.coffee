@@ -5,7 +5,7 @@
 ready = ->
 	# Portfolio Page | Hide/Show Showcases 
 	# image gallery
-	$(".view-project").on "click", ->
+	$(".view-project, .project").on "click", ->
 		$(".project-showcase").removeClass("showcase-hide")
 	#admin CRUD
 	$(".admin-showcase-toggle").on "click", ->
@@ -16,7 +16,7 @@ ready = ->
 		$(".showcase").addClass("showcase-hide")
 
 	#notices
-	$(".notice").animate({"top" : 0}, 1000).delay(4000).animate({"top" : -100}, 1000)
+	$(".notice").animate({"bottom" : 0}, 1000).delay(4000).animate({"bottom" : -150}, 1000)
 
 # Turbolink workaround
 $(document).ready(ready)

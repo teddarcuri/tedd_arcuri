@@ -15,10 +15,10 @@ $z-nav: 999;
 
 .notice {
 	position: fixed;
-	top: -100px; left: 0;
+	bottom: -150px; left: 0;
 	width: 100%;
 	background: $salmon;
-	padding: 20px;
+	padding: 50px;
 	z-index: $z-modal;
 }
 
@@ -33,16 +33,6 @@ $z-nav: 999;
 	}
 }
 
-.login-btn {
-	border: solid 2px $salmon;
-	background: transparent;
-	border-radius: 5px;
-	color: #fff;
-	cursor: pointer;
-	&:hover {
-		background: $salmon;
-	}
-}
 
 // Typed
 #typed-cursor{
