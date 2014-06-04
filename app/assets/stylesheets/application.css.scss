@@ -22,6 +22,7 @@
 @import "mixins";
 // Fonts
 @import "fonts";
+@import "forms";
 
 // Page Specific Styles
 @import "pages";
@@ -58,7 +59,7 @@ nav {
 
 .logo {
     height: 55px; width: 55px;
-    margin: 10px;
+    margin: 20px;
     background: image-url("logo.svg") no-repeat center center;
     background-size: 100%;
     border-radius: 200%;
@@ -88,6 +89,7 @@ ul.navigation {
             padding: 20px;
             margin: 0px 20px;
             border-bottom: solid 2px transparent;
+            text-shadow: 1px 1px 2px #000;
             &:hover {
                 border-bottom: solid 2px $salmon;
             }

@@ -15,14 +15,6 @@ ready = ->
 	$(".showcase-close").on "click", ->
 		$(".showcase").addClass("showcase-hide")
 
-	# Show/Hide Message Box in top right corner
-	$(".view-project").on "mouseover", ->
-		project = $(this).closest(".project")
-		$(".message-box").show().text("View " + project.attr("id") + "?")
-
-	$(".view-project").on "mouseout", ->
-		$(".message-box").fadeOut()
-
 # Turbolink workaround
 $(document).ready(ready)
 $(document).on('page:load', ready)

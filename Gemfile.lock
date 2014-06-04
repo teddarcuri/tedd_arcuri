@@ -124,7 +124,7 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   mysql2
-  paperclip
+  paperclip (~> 4.1.1)
   rails (= 4.0.2)
   sass-rails (~> 4.0.0)
   sdoc

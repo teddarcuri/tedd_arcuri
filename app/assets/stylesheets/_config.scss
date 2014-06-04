@@ -17,20 +17,7 @@ $z-nav: 999;
 	margin: auto;
 }
 
-.message-box {
-	display: none;
-	position: fixed;
-	top: 0;	 right: 0;
-	background: $salmon;
-	width: auto; height: auto;
-	border-radius: 0 0 0 $border-radius;
-	padding: 20px;
-	font-size: 1.5em;
-	z-index: $z-modal;
-}
-
 // Typed
-
 #typed-cursor{
 	display: none;
 } 
