@@ -1,0 +1,20 @@
+<div class="overlay login-overlay">
+	<div class="close-overlay"><h3>X</h3></div>
+	<div class="modal">
+		<h1>Log In</h1>
+		<br />
+		<p>I use this portal to manage my site. I built this site on top of the Rails framework and implemeneted a custom personal CMS. I'd love to show you around if you're curious, just shoot me an email at tedd.arcuri@gmail.com </p>
+		<hr>
+		<%= form_tag user_sessions_path do %>
+
+			<%= label_tag :username %><br />
+			<%= text_field_tag :username, params[:username] %><br />
+
+			<%= label_tag :password %><br />
+			<%= password_field_tag :password %><br />
+
+			<%= submit_tag "Log In", class: "login-btn" %>
+
+		<% end %>	
+	</div>
+</div>

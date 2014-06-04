@@ -15,12 +15,6 @@ ready = ->
 	$(".showcase-close").on "click", ->
 		$(".showcase").addClass("showcase-hide")
 
-	#notices
-	$(".notice").animate({"bottom" : 0}, 1000).delay(4000).animate({"bottom" : -150}, 1000)
-
-	#Navigation
-	$(window).scroll ->
-		$("nav").css({"background" : "rgba(15,15,15,0.9)"}) if $(window).scrollTop() > 50
 
 # Turbolink workaround
 $(document).ready(ready)

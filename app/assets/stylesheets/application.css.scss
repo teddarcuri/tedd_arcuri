@@ -83,10 +83,11 @@ ul.navigation {
         align-items: center;
 
         a {
+            cursor: pointer;
             font-size: 1em;
             display: inline-block;
             color: #fff;
-            padding: 20px;
+            padding: 22px;
             margin: 0px 20px;
             border-bottom: solid 2px transparent;
             text-shadow: 1px 1px 2px #000;
@@ -108,10 +109,10 @@ ul.social {
     }
 }
 
-@each $social in twitter, github, linkedin {
+@each $social in twitter, github, linkedin, login {
   .#{$social} {
     background: image-url("#{$social}.svg") no-repeat center center;
-    margin: 0px 10px;
+    margin: 0px 12px;
     background-size: contain;
     cursor: pointer;
     &:hover {

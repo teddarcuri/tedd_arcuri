@@ -1,0 +1,18 @@
+<nav>
+	<%= link_to " ", root_path, class: "logo" %>
+	<ul class="navigation">
+		<li><%= link_to "Me, The Person", {controller: "pages", action: "about"} %></li>
+		<li><%= link_to "My Work", projects_path %></li>
+		<li><%= link_to "Contact", {controller: "pages", action: "contact"} %></li>
+		<% if logged_in %>
+		<li><%= link_to "Logout", user_session_path(id: current_user_id), method: :delete %></li>
+		<% end %>
+	</ul>
+
+	<ul class="social">
+		<li class="social-icon github"></li>
+		<li class="social-icon twitter"></li>
+		<li class="social-icon linkedin"></li>
+		<li class="login-modal-toggle social-icon login "></li>
+	</ul>
+</nav>
