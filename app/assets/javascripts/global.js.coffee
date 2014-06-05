@@ -8,7 +8,7 @@ ready = ->
 
 	#Login overlay
 	$(".login-modal-toggle").click ->
-		$(".login-overlay").fadeIn().css({"display" : "flex"})
+		$(".login-overlay").addClass("overlay-show")
 		$(".login-overlay .modal").delay(300).animate({"top" : "0%"})
 
 	$(".close-overlay").click ->
@@ -17,7 +17,7 @@ ready = ->
 
 	#Login overlay
 	$(".contact-modal-toggle").click ->
-		$(".contact-overlay").fadeIn().css({"display" : "flex"})
+		$(".contact-overlay").addClass("overlay-show")
 		$(".contact-overlay .modal").delay(300).animate({"top" : "0%"})
 
 
