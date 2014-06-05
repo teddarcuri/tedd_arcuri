@@ -37,7 +37,7 @@ body {
     font-family: 'proxima-nova', sans-serif;
     background: $slate;
     font-size: 18px;
-    margin-top: $nav-height + 10px;
+    margin-top: $nav-height + 40px;
     @include bp(1400) {
         font-size: 16px;
     }
@@ -50,14 +50,13 @@ nav {
     position: fixed;
     top: 0; left: 0;
     width: 100%; height: $nav-height;
-    //background: rgba(15,15,15,0.9);
     z-index: $z-nav;
     @include display(flex);
     @include align-items(center);
     @include justify-content(flex-start);
 } // End Nav
 
-.logo {
+#logo {
     height: 55px; width: 55px;
     margin: 20px;
     background: image-url("logo.svg") no-repeat center center;
@@ -103,13 +102,16 @@ ul.social {
     @include flexbox();
     align-items: center;
     padding-right: 10px;
-
     li {
-        padding: 12px;
+        height: 25px; width: 25px;
+        a {
+            display: block;
+            height: 100%; width: 100%;
+        }
     }
 }
 
-@each $social in twitter, github, linkedin, login {
+@each $social in twitter, github, linkedin, login, logout {
   .#{$social} {
     background: image-url("#{$social}.svg") no-repeat center center;
     margin: 0px 12px;

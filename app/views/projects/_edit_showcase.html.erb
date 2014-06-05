@@ -1,4 +1,4 @@
-<div class="container">
+<div class="showcase admin-showcase showcase-hide">
 	<h1>Update Project</h1>
 
 	<%= form_for :project, url: project_path, method: :patch, :html => { :multipart => true } do |f| %>
@@ -7,7 +7,7 @@
 		<%= f.text_field :name %><br />
 
 		<h2>Kind</h2>
-		<%= f.select(:kind, options_for_select([['Logo', 'Logo'], ['Web', 'Web'], ['Web', 'Web']]) ) %>
+		<%= f.select(:kind, options_for_select([['Logo', 'Logo'], ['Web', 'Web']], ['Illustration', 'Illustration']) ) %>
 
 		<h2>Order</h2>
 		<%= f.number_field :order %><br />

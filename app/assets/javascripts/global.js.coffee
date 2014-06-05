@@ -4,7 +4,7 @@ ready = ->
 
 	#Navigation
 	$(window).scroll ->
-		$("nav").css({"background" : "rgba(15,15,15,0.9)"}) if $(window).scrollTop() > 20
+		$("nav").css({"background" : "rgba(15,15,15,0.95)"}) if $(window).scrollTop() > 20
 
 	#Login overlay
 	$(".login-modal-toggle").click ->
@@ -12,8 +12,14 @@ ready = ->
 		$(".login-overlay .modal").delay(300).animate({"top" : "0%"})
 
 	$(".close-overlay").click ->
-		$(".login-overlay .modal").animate({"top" : "100%"})
+		$(".modal").animate({"top" : "100%"})
 		$(".overlay").delay(300).fadeOut()
+
+	#Login overlay
+	$(".contact-modal-toggle").click ->
+		$(".contact-overlay").fadeIn().css({"display" : "flex"})
+		$(".contact-overlay .modal").delay(300).animate({"top" : "0%"})
+
 
 
 # Turbolink workaround

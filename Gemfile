@@ -11,6 +11,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'paperclip', '~> 4.1.1'
 gem 'bcrypt-ruby', '~> 3.1.5'
+gem 'masonry-rails'
 
 group :doc do
   gem 'sdoc', require: false

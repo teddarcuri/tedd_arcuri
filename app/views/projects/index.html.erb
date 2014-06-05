@@ -1,3 +1,7 @@
+<%= render 'projects/project_showcase' %>
+	
+<%= render 'projects/admin_showcase' %>
+
 <!-- The main container | App -->
 <div class="container">
 
@@ -6,7 +10,6 @@
 			<h1>My Work</h1>
 		<% else %>
 			<h1>Admin Panel</h1>
-			<p>Total Projects: <%= @projects.count %></p>
 		<% end %>
 		<div class="controls">
 			<% if logged_in %>
@@ -14,28 +17,20 @@
 				<a class="button admin-showcase-toggle">Create A New Project</a>
 				<%= link_to "Logout", user_session_path(id: current_user_id), method: :delete, class: "button" %>
 			<% else %>
-				<a href="" class="button">Web</a>
-				<a href="" class="button">Logo</a>
-				<a href="" class="button">Print</a>
+				<a dtata-filter=".logo" class="button">Web</a>
+				<a dtata-filter=".logo" class="button">Logo</a>
+				<a dtata-filter=".logo" class="button">Print</a>
 			<% end %>
 		</div>
 	</div> 
 
 	<div class="projects-container">
-		<!-- <div class="project featured">
-			<div class="project-photo"></div>
-			<div class="toolbar">
-				<a class="view-project"></a>
-				<a>Featured Project</a>
-			</div>
-		</div> -->
-
 		<% @projects.each do |project| %>
-		<div id="<%= dom_id(project) %>" class="project	">
+		<div id="<%= dom_id(project) %>" class="project	<%= project.kind.downcase %>">
 			<div class="project-photo" style="background: url(<%= project.image.url %>) no-repeat center center">
 				<% if logged_in %>
 				<div class="project-order">
-					Position: <%= project.order %>
+					<%= project.order %>
 				</div>
 				<% end %>
 				<div class="project-info">
@@ -62,64 +57,3 @@
 		<% end %>
 	</div>
 </div>
-
-<!-- The project showcase -->
-<div class="showcase project-showcase showcase-hide">
-
-	<div class="gallery">
-		<div class="showcase-close"><h3>X</h3></div>
-	</div>
-
-	<div class="sidebar">
-		<h1>Olive Real Estate</h1>
-		<section class="about">
-		<h2>Project Overview</h2>
-		<ul>
-			<li>Olive came to us during my time at Rootspring looking for a fresh, modern web prescence. The site features a full listings database with realtime searches, sorting, and a user based favoriting system.</li>
-		</ul>
-	</section>
-		<section class="about">
-		<h2>Key Features</h2>
-		<ul>
-		
-		</ul>
-	</section>
-		<section class="about">
-		<h2>Languages/Platforms</h2>
-		<ul>
-		
-		</ul>
-	</section>
-
-	<center><div class="button-lrg">View the site</div></center>
-
-	</div>
-</div>
-	
-<div class="showcase admin-showcase showcase-hide">
-
-	<h1>New Project</h1>
-
-	<%= form_for :project, url: projects_path, :html => { :multipart => true } do |f| %>
-
-		<h2>Name</h2>
-		<%= f.text_field :name %><br />
-
-		<h2>Kind</h2>
-		<%= select_tag(:kind, options_for_select([['Logo', 'Logo'], ['Web', 'Web']]) ) %>
-
-		<h2>Order</h2>
-		<%= f.number_field :order %><br />
-
-		<h2>Description</h2>
-		<%= f.text_area :description %><br />
-
-		<h2>Upload file</h2>
-		<%= f.file_field :image %>
-
-		<%= f.submit("Create a project", :class => "login-btn") %>
-
-	<% end %>
-
-	<div class="showcase-close"><h3>X</h3></div>
-</div>	
