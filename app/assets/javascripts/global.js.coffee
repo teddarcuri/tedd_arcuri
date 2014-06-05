@@ -4,7 +4,7 @@ ready = ->
 
 	#Login overlay
 	$(".login-modal-toggle").click ->
-		$(".login-overlay").addClass("overlay-show").show()
+		$(".login-overlay").addClass("overlay-show").hide().fadeIn()
 		$(".login-overlay .modal").delay(300).animate({"top" : "0%"})
 
 	$(".close-overlay").click ->
@@ -13,7 +13,7 @@ ready = ->
 
 	#Login overlay
 	$(".contact-modal-toggle").click ->
-		$(".contact-overlay").addClass("overlay-show").show()
+		$(".contact-overlay").addClass("overlay-show").hide().fadeIn()
 		$(".contact-overlay .modal").delay(300).animate({"top" : "0%"})
 
 
