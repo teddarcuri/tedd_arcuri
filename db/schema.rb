@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20140604064743) do
 
   create_table "projects", force: true do |t|
     t.string   "name"
-    t.string   "type"
+    t.string   "kind"
     t.string   "languages"
     t.text     "description"
     t.datetime "created_at"
