@@ -22,7 +22,7 @@
 	background: $salmon;
 	position: absolute;
 	top: 0; right: 0;
-	padding: 20px 0px;
+	padding: $nav-height + 10 0px 20px 0px;
 	overflow: auto;
 	@include bp(alpha) {
 		width: 100%;
