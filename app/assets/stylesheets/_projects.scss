@@ -137,6 +137,7 @@
 	bottom: 0; left: 0;
 	background: $slate;
 	z-index: $z-modal;
+	overflow: auto;
 	@include transition(all ease 0.5s);
 }
 
