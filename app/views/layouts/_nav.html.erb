@@ -1,19 +1,24 @@
 <nav>
 	<%= link_to " ", root_path, id: "logo" %>
-	<ul class="navigation">
-		<li><%= link_to "Me, The Person", {controller: "pages", action: "about"} %></li>
-		<li><%= link_to "My Work", projects_path %></li>
-		<li class="contact-modal-toggle"><a>Get In Touch</a></li>
-	</ul>
+	<div class="nav-container">
+		<ul class="navigation">
+			<li><%= link_to "Me, The Person", {controller: "pages", action: "about"} %></li>
+			<li><%= link_to "My Work", projects_path %></li>
+			<li class="contact-modal-toggle"><a>Get In Touch</a></li>
+		</ul>
 
-	<ul class="social">
-		<li class="social-icon github"></li>
-		<li class="social-icon twitter"></li>
-		<li class="social-icon linkedin"></li>
-		<% if !logged_in %>
-		<li class="login-modal-toggle social-icon login "></li>
-		<% else %>
-		<li class="social-icon logout"><%= link_to "", user_session_path(id: current_user_id), method: :delete %></li>
-		<% end %>
-	</ul>
+		<ul class="social">
+			<li class="social-icon github"></li>
+			<li class="social-icon twitter"></li>
+			<li class="social-icon linkedin"></li>
+			<% if !logged_in %>
+			<li class="login-modal-toggle social-icon login "></li>
+			<% else %>
+			<li class="social-icon logout"><%= link_to "", user_session_path(id: current_user_id), method: :delete %></li>
+			<% end %>
+		</ul>
+	</div>
+
+	<div class="mobile-nav-toggle">
+	</div>
 </nav>

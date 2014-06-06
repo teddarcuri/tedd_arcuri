@@ -5,17 +5,20 @@ ready = ->
 	#Login overlay
 	$(".login-modal-toggle").click ->
 		$(".login-overlay").addClass("overlay-show").hide().fadeIn()
-		$(".login-overlay .modal").delay(300).animate({"top" : "0%"})
+		$(".login-overlay .modal").delay(200).animate({"top" : "0%"})
 
 	$(".close-overlay").click ->
 		$(".modal").animate({"top" : "100%"})
-		$(".overlay").delay(300).fadeOut()
+		$(".overlay").delay(200).fadeOut()
 
 	#Login overlay
 	$(".contact-modal-toggle").click ->
 		$(".contact-overlay").addClass("overlay-show").hide().fadeIn()
-		$(".contact-overlay .modal").delay(300).animate({"top" : "0%"})
+		$(".contact-overlay .modal").delay(200).animate({"top" : "0%"})
 
+	# Nav toggle
+	$(".mobile-nav-toggle").click ->
+		$(".nav-container").toggleClass("open")
 
 
 # Turbolink workaround
