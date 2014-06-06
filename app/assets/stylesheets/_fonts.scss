@@ -61,6 +61,7 @@ li {
     }
     @include bp(charlie) {
         display: block;
+        width: 100%;
         line-height: 2em;
         margin: 15px 0px;
     }
