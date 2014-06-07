@@ -135,10 +135,12 @@
 	position: fixed;
 	width: 100%; height: 100%;
 	bottom: 0; left: 0;
-	background: red;
 	z-index: $z-modal !important;
-	overflow: auto;
+	background: $slate;
 	@include transition(all ease 0.5s);
+	@include bp(charlie) {
+		overflow: auto;
+	}
 }
 
 .admin-showcase {
@@ -219,7 +221,55 @@
 	top: 10px; right: 10px;
 	padding: 10px 15px;
 	border-radius: $border-radius / 2;
+	z-index: $z-modal + 50;
 	&:hover {
 		background: #000;
 	}
+}
+
+
+//////////////////////
+// Slick Slideshow 
+/////////////////////
+
+.slick-slider {
+	height: 100% !important;
+	width: 100%;
+	position: absolute;
+	margin: auto !important;
+	margin-bottom: 0px !important;
+	button {
+		height: 100%;
+		padding: 0px 50px;
+		top: 0;
+		margin-top: 0px;
+		z-index: $z-modal + 10;
+		&:hover {
+		 background: rgba(25,25,25,0.8);
+		 @include bp(charlie) {
+		 	background: none;
+		 }
+		}
+		&.slick-next {
+			right: 0;
+		}
+		&.slick-prev {
+			left: 0;
+		}
+	}
+}
+
+.slick-slide img {
+	max-width: 100%;
+}
+
+.slick-dots {
+	position: absolute;
+	bottom: 0 !important;
+	padding: 25px !important;
+	background: rgba(15,15,15,0.95);
+	z-index: $z-modal + 5;
+}
+.slick-dots li button:before {
+	color: #fff !important;
 }
