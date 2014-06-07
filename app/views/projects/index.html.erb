@@ -1,5 +1,6 @@
 <!-- The main container | App -->
 <div class="container">
+	<!-- Control Bar | Sort, Admin CRUD, etc. -->
 	<div class="control-bar">
 		<% if !logged_in %>
 			<h1>My Work</h1>
@@ -20,6 +21,7 @@
 		</div>
 	</div> 
 
+	<!-- The Projects Container -->
 	<div class="projects-container">
 		<% @projects.each do |project| %>
 

@@ -7,14 +7,14 @@ ready = ->
 		$(".login-overlay").addClass("overlay-show").hide().fadeIn()
 		$(".login-overlay .modal").delay(200).animate({"top" : "0%"})
 
-	$(".close-overlay").click ->
-		$(".modal").animate({"top" : "100%"})
-		$(".overlay").delay(200).fadeOut()
-
 	#Login overlay
 	$(".contact-modal-toggle").click ->
 		$(".contact-overlay").addClass("overlay-show").hide().fadeIn()
 		$(".contact-overlay .modal").delay(200).animate({"top" : "0%"})
+
+	$(".close-overlay").click ->
+		$(".modal").animate({"top" : "100%"})
+		$(".overlay").delay(200).fadeOut()
 
 	# Nav toggle
 	$(".mobile-nav-toggle").click ->

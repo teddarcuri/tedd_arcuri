@@ -1,11 +1,15 @@
 class ProjectsController < ApplicationController
 
+
   def index
   	@projects = Project.ordered
   end
 
   def show
   	@project = Project.find(params[:id])
+    respond_to do |format|
+      format.html { render :layout => false }
+    end
   end
 
   def new
