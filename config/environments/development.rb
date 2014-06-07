@@ -27,6 +27,6 @@ TeddArcuri::Application.configure do
   # number of complex assets.
   config.assets.debug = true
 
-  # Let paperclip acces Imagemagick
+  # Let paperclip access Imagemagick
   Paperclip.options[:command_path] = "/usr/local/bin/"
 end

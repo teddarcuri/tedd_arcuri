@@ -20,12 +20,12 @@
 	</div>	
 <% end %>
 
-<%= render 'layouts/contact' %>
-<%= render 'layouts/login' %>
-
 <%= render 'layouts/nav' %>
 
 <%= yield %>
+
+<%= render 'layouts/contact' %>
+<%= render 'layouts/login' %>
 
 <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 <script>

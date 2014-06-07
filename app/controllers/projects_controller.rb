@@ -2,7 +2,6 @@ class ProjectsController < ApplicationController
 
   def index
   	@projects = Project.ordered
-
   end
 
   def show
@@ -10,7 +9,8 @@ class ProjectsController < ApplicationController
   end
 
   def new
-  	@project = Project.new
+  	@project = Project.new(name: "Project Name", order: 1, description: "Provide a description of the project")
+    5.times {@project.assets.build}
   end
 
   def create
@@ -26,6 +26,7 @@ class ProjectsController < ApplicationController
 
   def edit
   	@project = Project.find(params[:id])
+     5.times {@project.assets.build}
   end
 
   def update
@@ -48,7 +49,7 @@ class ProjectsController < ApplicationController
 
   private	
 	  def project_params
-	  	  params.require(:project).permit(:name, :description, :kind, :order, :image, :remove_image)
+	  	  params.require(:project).permit(:name, :description, :kind, :order, :image, :remove_image, :assets_attributes => [:image])
 	  end
 
 end

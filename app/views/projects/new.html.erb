@@ -1,21 +1,7 @@
 <div class="container">
 	<h1>New Project</h1>
 
-	<%= form_for :project, url: projects_path, :html => { :multipart => true } do |f| %>
+	<%= render 'form' %>
 
-		<h2>Name</h2>
-		<%= f.text_field :name %><br />
-		<h2>Languages</h2>
-		<%= f.text_field :languages %><br />
-		<h2>Description</h2>
-		<%= f.text_area :description %><br />
-		<h2>Upload file</h2>
-		<%= f.fields_for :photo do |photo_fields| %>
-			<%= photo_fields.file_field :attachment %>
-		<% end %>
-
-		<%= f.submit("Create a project") %>
-
-	<% end %>
 </div>	
 	

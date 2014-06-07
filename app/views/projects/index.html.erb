@@ -1,10 +1,5 @@
-<%= render 'projects/project_showcase' %>
-	
-<%= render 'projects/admin_showcase' %>
-
 <!-- The main container | App -->
 <div class="container">
-
 	<div class="control-bar">
 		<% if !logged_in %>
 			<h1>My Work</h1>
@@ -14,6 +9,7 @@
 		<div class="controls">
 			<% if logged_in %>
 				<!-- If user is logged in -->
+				<%= link_to "NEW", new_project_path, class: "button" %>
 				<a class="button admin-showcase-toggle">Create A New Project</a>
 				<%= link_to "Logout", user_session_path(id: current_user_id), method: :delete, class: "button" %>
 			<% else %>
@@ -26,22 +22,27 @@
 
 	<div class="projects-container">
 		<% @projects.each do |project| %>
+
 		<div id="<%= dom_id(project) %>" class="project	<%= project.kind.downcase %>">
+
 			<div class="project-photo" style="background: url(<%= project.image.url %>) no-repeat center center">
 				<% if logged_in %>
 				<div class="project-order">
 					<%= project.order %>
 				</div>
 				<% end %>
+
 				<div class="project-info">
 					<h2>
 						<%= project.name %>
+						<%= link_to "show", project_path(:id => project.id) %>
 					</h2>
 					<hr>
 					<a>Type: <%= project.kind %></a>
 					<p><%= project.description %></p>
 				</div>
 			</div>
+
 			<div class="toolbar">
 				<a class="view-project"></a>
 				<a><%= project.name %></a>
@@ -53,7 +54,12 @@
 					<a><%= project.kind %></a>
 				<% end %>
 			</div>
+
 		</div>
 		<% end %>
 	</div>
 </div>
+
+<%= render 'projects/project_showcase' %>
+	
+<%= render 'projects/admin_showcase' %>

@@ -2,7 +2,6 @@ TeddArcuri::Application.routes.draw do
   get "pages/home"
   get "pages/about"
   get "pages/contact"
-  get "project/index"
 
   get "login", :to => "user_sessions#new"
 
