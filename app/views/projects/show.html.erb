@@ -1,5 +1,9 @@
-<% if @project.assets %>
-	<%= @project.assets.each do |asset| %>
-		<%= image_tag asset.image.url %>
+<div class="slideshow">
+	<% if @project.assets %>
+		<% @project.assets.each do |asset| %>
+			<div>
+				<%= image_tag asset.image.url %>
+			</div>
+		<% end %>
 	<% end %>
-<% end %>
+</div>

@@ -15,6 +15,9 @@ ready = ->
 	$(".showcase-close").on "click", ->
 		$(".showcase").addClass("showcase-hide")
 
+	#slidehow
+	$(".slideshow").slick()
+
 
 # Turbolink workaround
 $(document).ready(ready)
