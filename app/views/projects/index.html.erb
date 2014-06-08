@@ -61,6 +61,8 @@
 
 <%= render 'projects/project_showcase' %>
 	
-<%= render 'projects/new_showcase' %>
-	
-<%= render 'projects/edit_showcase' %>
+<% if logged_in %>
+	<!-- Admin Showcases -->
+	<%= render 'projects/new_showcase' %>
+	<%= render 'projects/edit_showcase' %>
+<% end %>

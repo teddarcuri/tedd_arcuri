@@ -32,6 +32,10 @@
 	</ul>
 </section>
 
-<center><div class="button-lrg">View the site</div></center>
+<% if @project.siteurl %>
+	<center>
+		<a target="_blank" href="<%= @project.siteurl %>" class="button-lrg">View the site</a>
+	</center>
+<% end %>
 
 </div>

@@ -31,10 +31,6 @@
 
 	}
 
-	hr {
-		border: solid 1px darken($salmon, 10%);
-	}
-
 	h1 {
 		color: darken($salmon, 10%);
 		margin: 20px;
@@ -60,13 +56,22 @@
 	}
 
 	section {
-		ul {
-			display: none;
+		hr {
+			border: solid 1px lighten($salmon, 10%);
+		}
+		div {
 			background: darken($salmon, 10%);
 			padding: 20px;
-
+			p {
+				color: #fff;
+			}
+		}
+		ul {
+			padding: 0px 20px 20px 20px;
 			li {
+				list-style: circle;
 				padding: 10px 0px;
+				font-size: 0.8em;
 			}
 		}
 	}

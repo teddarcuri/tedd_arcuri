@@ -288,9 +288,11 @@
 
 
 .slick-slide img {
-	width: 50% !important; height: auto !important;
-	top: 10% !important;
+	width: 70% !important; height: auto !important;
 	position: relative;
+	@include bp(beta) {
+		width: 80% !important;
+	}
 }
 
 .slick-dots {

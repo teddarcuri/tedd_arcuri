@@ -4,7 +4,7 @@
 
 ready = ->
 	$("section.about h2").click ->
-		$(this).siblings("ul").slideToggle()
+		$(this).siblings("div").slideToggle()
 		$(this).toggleClass("active")
 
 

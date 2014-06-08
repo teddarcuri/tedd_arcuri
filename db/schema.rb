@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140606220250) do
+ActiveRecord::Schema.define(version: 20140608203848) do
 
   create_table "assets", force: true do |t|
     t.integer  "project_id"
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 20140606220250) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.integer  "order"
+    t.string   "siteurl"
   end
 
   create_table "users", force: true do |t|
