@@ -14,6 +14,7 @@
 		<div class="inset">
 			<h3>Existing Gallery Images</h3>
 
+<<<<<<< HEAD
 			<div class="slideshow">
 				<%= f.fields_for :assets do |asset| %>
 				<% unless asset.object.new_record? %>
@@ -26,6 +27,24 @@
 			
 		</div>
 	<% end %>
+=======
+	<h2>Name</h2>
+	<%= f.text_field :name %><br />
+
+	<div class="left-input">
+		<h2>Kind</h2>
+		<%= f.select(:kind, options_for_select([['Logo', 'logo'], ['Web', 'web'], ['Illustration', 'illustration']]) ) %>
+	</div>
+	
+	<div class="right-input">
+		<h2>Order</h2>
+		<%= f.number_field :order %><br />
+	</div>
+	
+
+	<h2>Description</h2>
+	<%= f.text_area :description %><br />
+>>>>>>> 9b380295441937e9550fa686e03cab7590abb787
 
 	<div class="inset">
 		<h2>Add Gallery Images</h2>
