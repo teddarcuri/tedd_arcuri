@@ -114,11 +114,17 @@
 		position: absolute;
 		bottom: -100%;
 		width: 100%; max-height: 100%;
-		padding: 20px;
 		overflow: auto;
+		padding-bottom: 25px;
 		@include transition(all ease 0.5s);
 		h2 {
 			margin-bottom: 15px;
+			background: #000;
+			display: block;
+			padding: 10px;
+		}
+		a, p {
+			padding: 20px;
 		}
 	}
 
@@ -144,7 +150,8 @@
 }
 
 .admin-showcase {
-	padding: 100px;
+	padding: 50px 100px;
+	overflow: auto;
 	h1 {
 		color: rgba(255,255,255,0.1);
 		font-size: 5em;
@@ -238,6 +245,9 @@
 	position: absolute;
 	margin: auto !important;
 	margin-bottom: 0px !important;
+	@include display(flex !important);
+	@include justify-content(center);
+	@include align-content(center);
 	button {
 		height: 100%;
 		padding: 0px 50px;
@@ -259,8 +269,22 @@
 	}
 }
 
+.slick-slide {
+	@include display(flex !important);
+	@include justify-content(center);
+	@include align-content(center);
+	position: relative !important;
+	height: 100% !important;
+	bottom: 0 !important;
+}
+.slick-active {
+	height: 100% !important;
+}
 .slick-slide img {
-	max-width: 100%;
+	width: 70% !important; 
+	top: 10% !important;
+	border: solid 2px $salmon;
+	position: relative;
 }
 
 .slick-dots {

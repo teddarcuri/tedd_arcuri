@@ -6,8 +6,8 @@ ready = ->
 	# Hide/Show Showcases 
 	$(".view-project, .project-photo").on "click", ->
 		$(".project-showcase").removeClass("showcase-hide")
+		# Ajax Call For Project Showcase
 		id = $(this).closest('.project').attr('id').match(/\d+/)
-		# Ajax Show Method
 		$.ajax 
 			url: "/projects/" + id + ""
 			success: (response) ->
@@ -20,10 +20,19 @@ ready = ->
 				#hide showcases
 				$(".showcase-close").on "click", ->
 					$(".showcase").addClass("showcase-hide")
+		
 
 	#Admin CRUD
 	$(".admin-showcase-toggle").on "click", ->
-		$(".admin-showcase").removeClass("showcase-hide")	
+		$(".admin-showcase").removeClass("showcase-hide")
+		#Ajax For New Project
+		$.ajax 
+			url: "/projects/new"
+			success: (response) ->
+				$(".admin-showcase").append(response)	
+				#hide showcases
+				$(".showcase-close").on "click", ->
+					$(".showcase").addClass("showcase-hide")
 
 
 

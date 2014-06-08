@@ -10,7 +10,6 @@
 		<div class="controls">
 			<% if logged_in %>
 				<!-- If user is logged in -->
-				<%= link_to "NEW", new_project_path, class: "button" %>
 				<a class="button admin-showcase-toggle">Create A New Project</a>
 				<%= link_to "Logout", user_session_path(id: current_user_id), method: :delete, class: "button" %>
 			<% else %>
@@ -35,10 +34,9 @@
 				<% end %>
 
 				<div class="project-info">
-					<h2>
+					<h2 class="project-name">
 						<%= project.name %>
 					</h2>
-					<hr>
 					<a>Type: <%= project.kind %></a>
 					<p><%= project.description %></p>
 				</div>
