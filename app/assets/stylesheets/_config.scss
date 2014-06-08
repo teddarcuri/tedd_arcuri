@@ -31,6 +31,19 @@ $z-nav: 999;
 		background: darken($slate, 1%);
 		padding: 70px 40px;
 	}
+	.inset {
+		background: lighten($slate, 5%);
+		padding: 20px;
+		border-radius: $border-radius;
+		margin: 20px 0px;
+		@include clearfix();
+		img {
+			padding: 7px;
+			border: solid 2px $salmon;
+			float: left;
+			margin: 10px;
+		}
+	}
 }
 
 

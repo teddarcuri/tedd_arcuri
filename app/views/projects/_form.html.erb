@@ -1,5 +1,16 @@
 <%= form_for @project, :html => { :multipart => true } do |f| %>
 
+	<div class="inset">
+		<h2>Preview Image</h2>
+		<% if @project.image? %>
+		<br>
+			<%= image_tag @project.image.url(:medium) %>
+		<% end %>
+
+		<%= f.file_field :image %>
+	</div>
+
+
 	<h2>Name</h2>
 	<%= f.text_field :name %><br />
 
@@ -12,26 +23,30 @@
 	<h2>Description</h2>
 	<%= f.text_area :description %><br />
 
-	<h2>Preview Image</h2>
-	<%= f.file_field :image %>
-	<hr>
+	<div class="inset">
+		<h2>Gallery Images</h2>
+		<%= f.fields_for :assets do |asset| %>
 
-	<h2>Gallery Images</h2>
-	<%= f.fields_for :assets do |asset| %>
+			<% if asset.object.new_record? %>
+				<%= asset.file_field :image %> <hr>
+			<% end %>
 
-		<% if asset.object.new_record? %>
-			<%= asset.file_field :image %> <hr>
+		<% end %>
+	</div>
+
+		<% if !@project.new_record? %>
+			<div class="inset">
+				<h3>Existing images</h3>
+				<%= f.fields_for :assets do |asset| %>
+					<% unless asset.object.new_record? %>
+						<%= link_to( image_tag( asset.object.image.url(:medium)), asset.object.image.url(:original)) %>
+					<% end %>
+				<% end %>
+			</div>
 		<% end %>
 
-	<% end %>
-
-	<h3>Existing images</h3>
-	<%= f.fields_for :assets do |asset| %>
-		<% unless asset.object.new_record? %>
-			<%= link_to( image_tag( asset.object.image.url(:medium)), asset.object.image.url(:original)) %>
-		<% end %>
-	<% end %>
 
 	<%= f.submit( :class => "login-btn") %>
 
 <% end %>
+
