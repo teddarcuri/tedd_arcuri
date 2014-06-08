@@ -1,24 +1,3 @@
-<div class="showcase admin-showcase showcase-hide">
-	<h1>Update Project</h1>
-
-	<%= form_for :project, url: project_path, method: :patch, :html => { :multipart => true } do |f| %>
-
-	<h2>Name</h2>
-		<%= f.text_field :name %><br />
-
-		<h2>Kind</h2>
-		<%= f.select(:kind, options_for_select([['Logo', 'Logo'], ['Web', 'Web']], ['Illustration', 'Illustration']) ) %>
-
-		<h2>Order</h2>
-		<%= f.number_field :order %><br />
-
-		<h2>Description</h2>
-		<%= f.text_area :description %><br />
-
-		<h2>Upload file</h2>
-		<%= f.file_field :image %>
-
-		<%= f.submit("Update project", :class => "login-btn") %>
-
-<% end %>
+<div class="showcase admin-showcase edit-showcase showcase-hide">
+	
 </div>

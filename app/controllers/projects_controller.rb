@@ -33,7 +33,10 @@ class ProjectsController < ApplicationController
 
   def edit
   	@project = Project.find(params[:id])
-     5.times {@project.assets.build}
+    5.times {@project.assets.build}
+    respond_to do |format|
+      format.html { render :layout => false }
+    end
   end
 
   def update

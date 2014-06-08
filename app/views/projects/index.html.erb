@@ -10,7 +10,7 @@
 		<div class="controls">
 			<% if logged_in %>
 				<!-- If user is logged in -->
-				<a class="button admin-showcase-toggle">Create A New Project</a>
+				<a class="button new-showcase-toggle">Create A New Project</a>
 				<%= link_to "Logout", user_session_path(id: current_user_id), method: :delete, class: "button" %>
 			<% else %>
 				<a dtata-filter=".logo" class="button">Web</a>
@@ -47,7 +47,7 @@
 				<a><%= project.name %></a>
 				<% if logged_in %>
 					<!-- IF user is logged in -->
-					<%= link_to "Edit", edit_project_path(:id => project.id) %>
+					<a class="edit-showcase-toggle">Edit</a>
 					<%= link_to "", project_path(:id => project.id), method: :delete, :class => "delete-project" %>
 				<% else %>
 					<a><%= project.kind %></a>
@@ -61,4 +61,6 @@
 
 <%= render 'projects/project_showcase' %>
 	
-<%= render 'projects/admin_showcase' %>
+<%= render 'projects/new_showcase' %>
+	
+<%= render 'projects/edit_showcase' %>
