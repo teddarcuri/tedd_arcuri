@@ -10,6 +10,34 @@
 		<%= f.file_field :image %>
 	</div>
 
+	<% if !@project.new_record? %>
+		<div class="inset">
+			<h3>Existing Gallery Images</h3>
+
+			<div class="slideshow">
+				<%= f.fields_for :assets do |asset| %>
+				<% unless asset.object.new_record? %>
+					<div>
+						<%= link_to( image_tag( asset.object.image.url(:medium)), asset.object.image.url(:original)) %>
+					</div>
+				<% end %>
+			<% end %>
+			</div>
+			
+		</div>
+	<% end %>
+
+	<div class="inset">
+		<h2>Add Gallery Images</h2>
+		<%= f.fields_for :assets do |asset| %>
+
+			<% if asset.object.new_record? %>
+				<%= asset.file_field :image %> <hr>
+			<% end %>
+
+		<% end %>
+	</div>
+
 
 	<h2>Name</h2>
 	<%= f.text_field :name %><br />
@@ -22,29 +50,7 @@
 
 	<h2>Description</h2>
 	<%= f.text_area :description %><br />
-
-	<div class="inset">
-		<h2>Gallery Images</h2>
-		<%= f.fields_for :assets do |asset| %>
-
-			<% if asset.object.new_record? %>
-				<%= asset.file_field :image %> <hr>
-			<% end %>
-
-		<% end %>
-	</div>
-
-		<% if !@project.new_record? %>
-			<div class="inset">
-				<h3>Existing images</h3>
-				<%= f.fields_for :assets do |asset| %>
-					<% unless asset.object.new_record? %>
-						<%= link_to( image_tag( asset.object.image.url(:medium)), asset.object.image.url(:original)) %>
-					<% end %>
-				<% end %>
-			</div>
-		<% end %>
-
+	
 
 	<%= f.submit( :class => "login-btn") %>
 

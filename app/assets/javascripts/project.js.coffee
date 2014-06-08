@@ -45,6 +45,13 @@ ready = ->
 				#hide showcases
 				$(".showcase-close").on "click", ->
 					$(".showcase").addClass("showcase-hide")
+				#slidehow
+				$(".slideshow").slick({
+					speed: 500,
+					infinite: true,
+					slidesToShow: 3,
+					slidesToScroll: 3
+				})
 
 
 
