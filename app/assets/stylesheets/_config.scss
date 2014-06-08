@@ -38,10 +38,9 @@ $z-nav: 999;
 		margin: 20px 0px;
 		@include clearfix();
 		img {
-			padding: 7px;
-			border: solid 2px $salmon;
-			float: left;
-			margin: 10px;
+			width: 47%;
+			border: solid 3px $salmon;
+			margin: 1%;
 		}
 	}
 }

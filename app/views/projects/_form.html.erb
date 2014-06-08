@@ -14,11 +14,16 @@
 	<h2>Name</h2>
 	<%= f.text_field :name %><br />
 
-	<h2>Kind</h2>
-	<%= f.select(:kind, options_for_select([['Logo', 'logo'], ['Web', 'web'], ['Illustration', 'illustration']]) ) %>
-
-	<h2>Order</h2>
-	<%= f.number_field :order %><br />
+	<div class="left-input">
+		<h2>Kind</h2>
+		<%= f.select(:kind, options_for_select([['Logo', 'logo'], ['Web', 'web'], ['Illustration', 'illustration']]) ) %>
+	</div>
+	
+	<div class="right-input">
+		<h2>Order</h2>
+		<%= f.number_field :order %><br />
+	</div>
+	
 
 	<h2>Description</h2>
 	<%= f.text_area :description %><br />
