@@ -14,36 +14,36 @@
 <div class="sidebar">
 	<h1><%= @project.name %></h1>
 	<h4><%= @project.kind %></h4>
-	<p class="myrole"><%= @project.myrole %></p>
+	<div class="myrole"><%= @project.myrole %></div> 
 
-	<% if @project.description %>
+	<% if @project.description? %>
 	<section class="about">
 		<h2>Project Overview</h2>
 		<div>
-			<p><%= @project.description %></p>
+			<p><%= raw @project.description %></p>
 		</div>
 	</section>
 	<% end %>	
 
-	<% if @project.features %>
+	<% if @project.features? %>
 	<section class="about">
 		<h2>Key Features</h2>
 		<div>
-			<p><%= @project.features %></p>
+			<p><%= raw @project.features %></p>
 		</div>
 	</section>
 	<% end %>	
 
-	<% if @project.technologies %>
+	<% if @project.technologies? %>
 	<section class="about">
 		<h2>Technologies</h2>
 		<div>
-			<p><%= @project.technologies %></p>
+			<p><%= raw @project.technologies %></p>
 		</div>
 	</section>
 	<% end %>
 
-	<% if @project.siteurl %>
+	<% if @project.siteurl? %>
 		<center>
 			<a target="_blank" href="<%= @project.siteurl %>" class="button-lrg">View the site</a>
 		</center>

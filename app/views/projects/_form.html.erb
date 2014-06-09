@@ -29,11 +29,18 @@
 		</div>
 	<% end %>
 
-	<h2>Name</h2>
-	<%= f.text_field :name %>
+	<div class="left-input">
+		<h2>Name</h2>
+		<%= f.text_field :name %>
+	</div>
+	
+	<div class="right-input">
+		<h2>My Role</h2>
+		<%= f.text_field :myrole %>
+	</div>
 
-	<h2>My Role</h2>
-	<%= f.text_area :myrole, class: "tinymce" %>
+	<h2>Description</h2>
+	<%= f.text_area :description, class: "tinymce" %><br />
 
 	<h2>Key Features</h2>
 	<%= f.text_area :features, class: "tinymce" %>
@@ -53,9 +60,6 @@
 
 	<h2>Site Url</h2>
 	<%= f.text_field :siteurl %>
-	
-	<h2>Description</h2>
-	<%= f.text_area :description, class: "tinymce" %><br />
 
 	<div class="inset">
 		<h2>Add Gallery Images</h2>

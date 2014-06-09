@@ -148,12 +148,16 @@
 .admin-showcase {
 	padding: 50px 100px;
 	overflow: auto;
+	@include bp(charlie) {
+		padding: 25px;
+	}
 	h1 {
 		color: rgba(255,255,255,0.1);
 		font-size: 5em;
 	}
 	.container {
 		max-width: 900px !important;
+		width: 100%;
 	}
 }
 
@@ -194,7 +198,7 @@
 		font-size: 1.2em;
 		padding: 20px 0px 20px 30px;
 		cursor: pointer;
-		background: image-url("arrow.svg") no-repeat 10px center;
+		background: image-url("arrow.svg") no-repeat 10px center $slate;
 		background-size: 10px;
 		&:hover {
 			background: image-url("arrow.svg") no-repeat 10px center lighten($slate, 10%);
@@ -213,16 +217,17 @@
 	section {
 		position: relative;
 		div {
-			display: none;
+			//display: none;
 			padding: 25px;
-			background: lighten($slate, 10%);
+			background: lighten($slate, 15%);
 		}
 		.active {
 			display: block;
 		}
 		ul {
 			li {
-				padding: 10px 0px;
+				@extend p;
+				padding: 10px 0px;	
 			}
 		}
 	}
@@ -230,7 +235,7 @@
 	.myrole {
 		font-style: italic !important;
 		font-size: 0.8em;
-		padding: 7px 20px;
+		padding: 20px;
 	}
 }
 
