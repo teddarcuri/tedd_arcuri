@@ -16,4 +16,3 @@
 //= require slick
 //= require tinymce-jquery
 //= require_tree .
-

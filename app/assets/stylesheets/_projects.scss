@@ -59,7 +59,6 @@
 	overflow: hidden;
 	border-radius: $border-radius;
 	cursor: pointer;
-	background: lighten($slate, 5%);
 	@include bp(1600){ width: 30%; }
 	@include bp(1300){ width: 48%; }
 	@include bp(700){ width: 95%; }
@@ -68,7 +67,7 @@
 		width: 100%; height: 50px;
 		background: darken($slate, 3%);
 		overflow: hidden;
-		border-radius: 0px 0px $border-radius $border-radius;
+		//border-radius: 0px 0px $border-radius $border-radius;
 		@include display(flex);
 		a {
 			cursor: pointer;
@@ -112,7 +111,7 @@
 	}
 
 	.project-info {
-		background: rgba(0,0,0,0.9);
+		background: rgba(0,0,0,0.95);
 		position: absolute;
 		bottom: -100%;
 		width: 100%; max-height: 100%;
@@ -120,16 +119,17 @@
 		padding-bottom: 25px;
 		@include transition(all ease 0.5s);
 		h2 {
-			margin-bottom: 15px;
 			display: block;
 			padding: 15px;
-			border-bottom: solid 2px #444;
 		}
 		a, p {
 			padding: 5px 20px;
 		}
 		.project-kind {
 			color: $salmon;
+			border-bottom: solid 2px $salmon;
+			display: block;
+			padding: 0px 20px 10px 20px;
 		}
 	}
 
@@ -321,7 +321,7 @@
 
 
 .slick-slide img {
-	width: 100% !important; height: auto !important; 
+	width: auto !important; height: auto !important; 
 	position: relative;
 	@include bp(beta) {
 		width: 80% !important;

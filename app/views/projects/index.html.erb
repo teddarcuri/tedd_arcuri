@@ -26,7 +26,7 @@
 
 		<div id="<%= dom_id(project) %>" class="project	<%= project.kind.downcase %>">
 
-			<div class="project-photo" style="background: url(<%= project.image.url %>) no-repeat center center">
+			<div class="project-photo" style="background: url(<%= project.image.url(:original) %>) no-repeat center center">
 				<% if logged_in %>
 				<div class="project-order">
 					<%= project.order %>
