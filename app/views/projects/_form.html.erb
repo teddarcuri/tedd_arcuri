@@ -2,6 +2,9 @@
 
 <%= tinymce theme: "modern"%>
 
+	<h2>Name</h2>
+	<%= f.text_field :name %>
+
 	<div class="inset">
 		<h2>Preview Image</h2>
 		<% if @project.image? %>
@@ -28,10 +31,30 @@
 			
 		</div>
 	<% end %>
+	<div class="inset">
+		<h2>Add Gallery Images</h2>
+		<%= f.fields_for :assets do |asset| %>
+
+			<% if asset.object.new_record? %>
+				<%= asset.file_field :image %> <hr>
+			<% end %>
+
+		<% end %>
+	</div>
 
 	<div class="left-input">
-		<h2>Name</h2>
-		<%= f.text_field :name %>
+		<h2>Kind</h2>
+		<%= f.select(:kind, options_for_select([['Logo', 'logo'], ['Web', 'web'], ['Illustration', 'illustration']]) ) %>
+	</div>
+	
+	<div class="right-input">
+		<h2>Order</h2>
+		<%= f.number_field :order %><br />
+	</div>
+
+	<div class="left-input">
+		<h2>Site Url</h2>
+		<%= f.text_field :siteurl %>
 	</div>
 	
 	<div class="right-input">
@@ -47,30 +70,6 @@
 
 	<h2>Technolgies</h2>
 	<%= f.text_area :technologies, class: "tinymce" %>
-
-	<div class="left-input">
-		<h2>Kind</h2>
-		<%= f.select(:kind, options_for_select([['Logo', 'logo'], ['Web', 'web'], ['Illustration', 'illustration']]) ) %>
-	</div>
-	
-	<div class="right-input">
-		<h2>Order</h2>
-		<%= f.number_field :order %><br />
-	</div>
-
-	<h2>Site Url</h2>
-	<%= f.text_field :siteurl %>
-
-	<div class="inset">
-		<h2>Add Gallery Images</h2>
-		<%= f.fields_for :assets do |asset| %>
-
-			<% if asset.object.new_record? %>
-				<%= asset.file_field :image %> <hr>
-			<% end %>
-
-		<% end %>
-	</div>
 	
 
 	<%= f.submit( :class => "login-btn") %>

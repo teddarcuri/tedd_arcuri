@@ -13,9 +13,10 @@
 				<a class="button new-showcase-toggle">Create A New Project</a>
 				<%= link_to "Logout", user_session_path(id: current_user_id), method: :delete, class: "button" %>
 			<% else %>
-				<a dtata-filter=".logo" class="button">Web</a>
-				<a dtata-filter=".logo" class="button">Logo</a>
-				<a dtata-filter=".logo" class="button">Illustration</a>
+				<a data-filter="*" class="button">View All</a>
+				<a data-filter=".web" class="button">Web</a>
+				<a data-filter=".logo" class="button">Logo</a>
+				<a data-filter=".illustration" class="button">Illustration</a>
 			<% end %>
 		</div>
 	</div> 
@@ -42,7 +43,6 @@
 						<%= project.name %>
 					</h2>
 					<a class="project-kind"><%= project.kind %></a>
-					<p><%= raw project.description %></p>
 				</div>
 			</div>
 

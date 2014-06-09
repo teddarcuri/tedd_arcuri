@@ -15,4 +15,7 @@
 //= require turbolinks
 //= require slick
 //= require tinymce-jquery
+//= require masonry/jquery.masonry
+//= require masonry/jquery.imagesloaded.min
+//= require jquery.isotope.js
 //= require_tree .

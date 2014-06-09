@@ -62,7 +62,15 @@ $(".edit-showcase-toggle").on "click", ->
 				infinite: true,
 				slidesToShow: 3
 			})
+# Isotope
+$(".projects-container").isotope ->
+  	itemSelector: '.project'
 
+$(".controls").on "click", "a", ->
+	filterValue = $(this).attr('data-filter')
+	$(".projects-container").isotope({
+ 		filter: filterValue
+	})
 
 
 # Turbolink workaround
