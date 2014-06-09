@@ -84,14 +84,6 @@
 					background-size: 30px;
 				}
 			}
-			&.delete-project {
-				background: image-url("trash.svg") no-repeat center center;
-				background-size: 15px;
-				&:hover {
-					background: image-url("trashmo.svg") no-repeat center center darken($salmon, 10%);
-					background-size: 15px;
-				}
-			}
 		}
 	}
 }
@@ -102,7 +94,6 @@
 	background-size: cover !important;
 	position: relative;
 	overflow: hidden;
-
 	&:hover {
 		.project-info {
 			@include transition(all ease 0.5s);
@@ -138,6 +129,36 @@
 		display: inline-block;
 		border-radius: 0px 0px $border-radius 0px;
 		background: $salmon;
+		z-index: $z-modal;
+		position: absolute;
+		top: 0; left: 0;
+	}
+
+	.crud-tools {
+		background: $salmon;
+		position: absolute;
+		top: 0; right: 0;
+		display: inline-block;
+		border-radius: 0px 0px 0px $border-radius;
+		z-index: $z-modal;
+		overflow: hidden;
+		a {
+			padding: 20px !important;
+			display: block;
+			height: 100% !important;
+			border-bottom: solid 2px darken($salmon, 5%);
+			&:hover {
+				background: darken($salmon, 10%);
+			}
+		}
+		.delete-project {
+			background: image-url("trashmo.svg") no-repeat center center;
+			background-size: 15px;
+			&:hover {
+				background: image-url("trashmo.svg") no-repeat center center darken($salmon, 10%);
+				background-size: 15px;
+			}
+		}
 	}
 
 }
@@ -153,7 +174,7 @@
 	z-index: $z-modal !important;
 	background: $slate;
 	@include transition(all ease 0.5s);
-	@include bp(charlie) {
+	@include bp(beta) {
 		overflow: auto;
 	}
 }
@@ -196,9 +217,10 @@
 	background: #222;
 	position: absolute;
 	top: 0; right: 0;
-
+	overflow: auto;
+	box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.3);
 	@include bp(alpha) {
-		width: 100%; height: 500px;
+		width: 100%; height: auto;
 		position: relative;
 	}
 
@@ -211,8 +233,9 @@
 		font-size: 1.2em;
 		padding: 20px 0px 20px 30px;
 		cursor: pointer;
-		background: image-url("arrow.svg") no-repeat 10px center $slate;
+		background: image-url("arrow.svg") no-repeat 10px center;
 		background-size: 10px;
+		border-bottom: solid 2px lighten($slate, 20%);
 		&:hover {
 			background: image-url("arrow.svg") no-repeat 10px center lighten($slate, 10%);
 			background-size: 10px;
@@ -230,7 +253,7 @@
 	section {
 		position: relative;
 		div {
-			//display: none;
+			display: none;
 			padding: 25px;
 			background: lighten($slate, 15%);
 		}
@@ -288,7 +311,7 @@
 		margin-top: 0px;
 		z-index: $z-modal + 10;
 		&:hover {
-		 background: rgba(25,25,25,0.8);
+		 background: rgba(0,0,0,0.95);
 		 @include bp(charlie) {
 		 	background: none;
 		 }
@@ -333,7 +356,7 @@
 	bottom: 0 !important;
 	left: 0 !important;
 	padding: 25px !important;
-	background: rgba(15,15,15,0.95);
+	background: rgba(15,15,15,0.5);
 	z-index: $z-modal + 5;
 }
 .slick-dots li button:before {

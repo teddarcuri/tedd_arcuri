@@ -15,7 +15,6 @@ $(".view-project, .project-photo").on "click", ->
 			#slidehow
 			$(".slideshow").slick({
 				dots: true, 
-				slidesToShow: 2,
 				speed: 500,
 				responsive: [
 				    {
@@ -28,6 +27,10 @@ $(".view-project, .project-photo").on "click", ->
 			#hide showcases
 			$(".showcase-close").on "click", ->
 				$(".showcase").addClass("showcase-hide")
+			# Sidebar Information Toggle
+			$("section.about h2").click ->
+				$(this).siblings("div").slideToggle();
+				$(this).toggleClass("active")
 
 # New Project
 $(".new-showcase-toggle").on "click", ->
@@ -57,8 +60,7 @@ $(".edit-showcase-toggle").on "click", ->
 			$(".slideshow").slick({
 				speed: 500,
 				infinite: true,
-				slidesToShow: 3,
-				slidesToScroll: 3
+				slidesToShow: 3
 			})
 
 
