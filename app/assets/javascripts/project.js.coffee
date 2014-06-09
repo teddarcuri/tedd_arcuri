@@ -63,13 +63,13 @@ $(".edit-showcase-toggle").on "click", ->
 				slidesToShow: 3
 			})
 # Isotope
-$(".projects-container").isotope ->
-  	itemSelector: '.project'
+$(".projects-container").isotope "bindResize", ->
+  	itemSelector: '.project',
 
 $(".controls").on "click", "a", ->
 	filterValue = $(this).attr('data-filter')
 	$(".projects-container").isotope({
- 		filter: filterValue
+ 		filter: filterValue,
 	})
 
 
