@@ -63,7 +63,7 @@ $(".edit-showcase-toggle").on "click", ->
 				slidesToShow: 3
 			})
 # Isotope
-$(".projects-container").isotope "bindResize", ->
+$(".projects-container").isotope ->
   	itemSelector: '.project',
 
 $(".controls").on "click", "a", ->
