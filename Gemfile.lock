@@ -110,6 +110,8 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.4)
     tilt (1.4.1)
+    tinymce-rails (4.0.28)
+      railties (>= 3.1.1)
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
@@ -135,5 +137,6 @@ DEPENDENCIES
   sass-rails (~> 4.0.0)
   sdoc
   slick_rails
+  tinymce-rails
   turbolinks
   uglifier (>= 1.3.0)

@@ -13,29 +13,39 @@
 
 <div class="sidebar">
 	<h1><%= @project.name %></h1>
-	<section class="about">
-	<h2>Project Overview</h2>
-	<ul>
-		<li><%= @project.description %></li>
-	</ul>
-</section>
-	<section class="about">
-	<h2>Key Features</h2>
-	<ul>
-	
-	</ul>
-</section>
-	<section class="about">
-	<h2>Languages/Platforms</h2>
-	<ul>
-	
-	</ul>
-</section>
+	<h4><%= @project.kind %></h4>
+	<p class="myrole"><%= @project.myrole %></p>
 
-<% if @project.siteurl %>
-	<center>
-		<a target="_blank" href="<%= @project.siteurl %>" class="button-lrg">View the site</a>
-	</center>
-<% end %>
+	<% if @project.description %>
+	<section class="about">
+		<h2>Project Overview</h2>
+		<div>
+			<p><%= @project.description %></p>
+		</div>
+	</section>
+	<% end %>	
 
+	<% if @project.features %>
+	<section class="about">
+		<h2>Key Features</h2>
+		<div>
+			<p><%= @project.features %></p>
+		</div>
+	</section>
+	<% end %>	
+
+	<% if @project.technologies %>
+	<section class="about">
+		<h2>Technologies</h2>
+		<div>
+			<p><%= @project.technologies %></p>
+		</div>
+	</section>
+	<% end %>
+
+	<% if @project.siteurl %>
+		<center>
+			<a target="_blank" href="<%= @project.siteurl %>" class="button-lrg">View the site</a>
+		</center>
+	<% end %>
 </div>

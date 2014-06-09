@@ -13,7 +13,8 @@
 	@include flex-wrap(wrap);
 	@include justify-content(space-between);
 	margin-bottom: 50px;
-	@include bp(beta){
+	@include bp(alpha){
+		padding-top: 50px;
 		h1 {
 			margin-bottom: 20px;
 			width: 100%;
@@ -186,7 +187,7 @@
 
 	h1 {
 		font-size: 2em;
-		padding: 25px 10px;
+		padding: 25px 20px 10px 20px;
 	}
 
 	h2 {
@@ -205,30 +206,45 @@
 		}
 	}
 
+	h4 {
+		padding: 7px 20px;
+	}
+
 	section {
 		position: relative;
-		ul {
+		div {
 			display: none;
+			padding: 25px;
 			background: lighten($slate, 10%);
-			padding: 20px;
-
+		}
+		.active {
+			display: block;
+		}
+		ul {
 			li {
 				padding: 10px 0px;
 			}
 		}
 	}
+
+	.myrole {
+		font-style: italic !important;
+		font-size: 0.8em;
+		padding: 7px 20px;
+	}
 }
 
 .showcase-close {
-	background: $salmon;
+	border: solid 2px $salmon;
 	position: absolute;
 	cursor: pointer;
 	top: 10px; right: 10px;
-	padding: 10px 15px;
-	border-radius: $border-radius / 2;
+	padding: 10px 12px;
+	border-radius: $border-radius / 3;
 	z-index: $z-modal + 50;
+	font-size: 0.5em;
 	&:hover {
-		background: #000;
+		background: $salmon;
 	}
 }
 
@@ -283,12 +299,11 @@
 	@include justify-content(center);
 	@include align-content(center);
 	@include align-items(center);
-	
 }
 
 
 .slick-slide img {
-	width: 70% !important; height: auto !important;
+	width: 70% !important; height: auto !important; 
 	position: relative;
 	@include bp(beta) {
 		width: 80% !important;

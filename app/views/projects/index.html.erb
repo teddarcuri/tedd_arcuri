@@ -15,7 +15,7 @@
 			<% else %>
 				<a dtata-filter=".logo" class="button">Web</a>
 				<a dtata-filter=".logo" class="button">Logo</a>
-				<a dtata-filter=".logo" class="button">Print</a>
+				<a dtata-filter=".logo" class="button">Illustration</a>
 			<% end %>
 		</div>
 	</div> 
@@ -50,7 +50,6 @@
 					<a class="edit-showcase-toggle">Edit</a>
 					<%= link_to "", project_path(:id => project.id), method: :delete, :class => "delete-project" %>
 				<% else %>
-					<a><%= project.kind %></a>
 				<% end %>
 			</div>
 

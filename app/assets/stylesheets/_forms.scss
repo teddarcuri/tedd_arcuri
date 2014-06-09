@@ -21,6 +21,12 @@ input[type="text"], input[type="password"], input[type="number"], input[type="su
 	}
 }
 
+#project_image {
+	display: block !important;
+	width: 100% !important;
+	cursor: pointer;
+}
+
 select {
 	background: lighten($slate, 15%);
 	padding: 10px;
@@ -45,6 +51,15 @@ textarea {
 	padding: 20px;
 	color: lighten($slate, 80%);
 	font-size: 1em;
+	margin: 20px 0px;
+}
+
+.mce-tinymce {
+	margin: 20px 0px !important;
+}
+
+.mce-btn i:before {
+	color: $slate;
 }
 
 .left-input {

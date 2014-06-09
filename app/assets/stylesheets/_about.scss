@@ -28,6 +28,7 @@
 		width: 100%;
 		position: relative;
 		height: auto;
+		padding: 20px 0px;
 
 	}
 
@@ -42,6 +43,7 @@
 		background: image-url("arrow.svg") no-repeat 15px center;
 		background-size: 10px;
 		margin: 20px 0px 0px 0px;
+		border-bottom: solid 2px darken($salmon, 5%);
 		@include transition(all ease 0.2s);
 		&:hover {
 			background: image-url("arrow.svg") no-repeat 20px center darken($salmon, 10%);
@@ -60,8 +62,9 @@
 			border: solid 1px lighten($salmon, 10%);
 		}
 		div {
+			display: none;
 			background: darken($salmon, 10%);
-			padding: 20px;
+			padding: 50px;
 			p {
 				color: #fff;
 			}

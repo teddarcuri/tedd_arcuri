@@ -1,5 +1,7 @@
 <%= form_for @project, :html => { :multipart => true } do |f| %>
 
+<%= tinymce theme: "modern"%>
+
 	<div class="inset">
 		<h2>Preview Image</h2>
 		<% if @project.image? %>
@@ -26,8 +28,18 @@
 			
 		</div>
 	<% end %>
+
 	<h2>Name</h2>
-	<%= f.text_field :name %><br />
+	<%= f.text_field :name %>
+
+	<h2>My Role</h2>
+	<%= f.text_area :myrole, class: "tinymce" %>
+
+	<h2>Key Features</h2>
+	<%= f.text_area :features, class: "tinymce" %>
+
+	<h2>Technolgies</h2>
+	<%= f.text_area :technologies, class: "tinymce" %>
 
 	<div class="left-input">
 		<h2>Kind</h2>
@@ -43,7 +55,7 @@
 	<%= f.text_field :siteurl %>
 	
 	<h2>Description</h2>
-	<%= f.text_area :description %><br />
+	<%= f.text_area :description, class: "tinymce" %><br />
 
 	<div class="inset">
 		<h2>Add Gallery Images</h2>
