@@ -55,7 +55,7 @@ nav {
     width: 100%; height: $nav-height;
     background: $slate;
     z-index: $z-nav;
-    box-shadow: 0px 0px 20px 10px $slate;
+    box-shadow: 0px 0px 20px 0px $slate;
     @include display(flex);
     @include align-items(center);
     @include justify-content(flex-start);
