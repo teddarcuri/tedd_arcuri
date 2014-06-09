@@ -15,7 +15,15 @@ ready = ->
 				#slidehow
 				$(".slideshow").slick({
 					dots: true, 
-					speed: 500
+					slidesToShow: 3,
+					speed: 500,
+					responsive: [
+					    {
+					      breakpoint: 900,
+					      settings: {
+					        arrows: false,
+					      }
+					    }]	
 				})
 				#hide showcases
 				$(".showcase-close").on "click", ->

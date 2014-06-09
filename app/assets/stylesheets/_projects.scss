@@ -20,6 +20,23 @@
 			width: 100%;
 		}
 	}
+	h1 {
+		span {
+			font-size: 0.3em !important;
+			font-style: italic;
+			font-weight: 400;
+			color: #777;
+			@include bp(charlie) {
+				display: block;
+				padding-top: 10px;
+			}
+			img {
+				height: 15px;
+				margin: 0px 5px;
+				vertical-align: middle;
+			}
+		}
+	}
 	.controls {
 		@include bp(charlie) {
         	width: 100%;
@@ -46,13 +63,6 @@
 	@include bp(1600){ width: 30%; }
 	@include bp(1300){ width: 48%; }
 	@include bp(700){ width: 95%; }
-	&:hover {
-		.view-project {
-			@include transition(all ease 0.5s);
-			background: image-url("eyemo.svg") no-repeat center center darken($salmon, 10%) !important;
-			background-size: 30px !important;
-		}
-	}
 
 	.toolbar {
 		width: 100%; height: 50px;
@@ -68,10 +78,10 @@
 			line-height: 2.75em;
 			color: #aaa;
 			&.view-project {
-				background: image-url("eyemo.svg") no-repeat center center;
+				background: image-url("eye.svg") no-repeat center center;
 				background-size: 30px;
 				&:hover {
-					background: image-url("eye.svg") no-repeat center center lighten($slate, 10%);
+					background: image-url("eyemo.svg") no-repeat center center darken($salmon, 10%);
 					background-size: 30px;
 				}
 			}
@@ -111,12 +121,15 @@
 		@include transition(all ease 0.5s);
 		h2 {
 			margin-bottom: 15px;
-			background: #000;
 			display: block;
-			padding: 10px;
+			padding: 15px;
+			border-bottom: solid 2px #444;
 		}
 		a, p {
-			padding: 20px;
+			padding: 5px 20px;
+		}
+		.project-kind {
+			color: $salmon;
 		}
 	}
 
@@ -308,7 +321,7 @@
 
 
 .slick-slide img {
-	width: 70% !important; height: auto !important; 
+	width: 100% !important; height: auto !important; 
 	position: relative;
 	@include bp(beta) {
 		width: 80% !important;
