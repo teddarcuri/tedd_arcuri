@@ -21,7 +21,7 @@
 	width: 50%; height: 100%;
 	background: $salmon;
 	position: absolute;
-	top: $nav-height; right: 0;
+	top: 0; right: 0;
 	padding: 10px 0px 20px 0px;
 	z-index: $z-modal;
 	box-shadow: 0px 0px 20px 5px rgba(0,0,0, 0.3);
@@ -32,7 +32,6 @@
 		padding: 20px 0px;
 
 	}
-
 	h1 {
 		color: darken($salmon, 10%);
 		margin: 20px;
@@ -41,9 +40,8 @@
 		font-size: 1.2em;
 		padding: 20px 0px 20px 40px;
 		cursor: pointer;
-		background: image-url("arrow.svg") no-repeat 15px center;
+		background: image-url("arrow.svg") no-repeat 15px center $salmon;
 		background-size: 10px;
-		margin: 20px 0px 0px 0px;
 		border-bottom: solid 2px darken($salmon, 5%);
 		@include transition(all ease 0.2s);
 		&:hover {
@@ -59,6 +57,7 @@
 	}
 
 	section {
+		margin: 0px;
 		hr {
 			border: solid 1px lighten($salmon, 10%);
 		}

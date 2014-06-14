@@ -71,6 +71,9 @@ $(".controls").on "click", "a", ->
 	$(".projects-container").isotope({
  		filter: filterValue,
 	})
+#hide showcases
+$(".showcase-close").on "click", ->
+	$(".showcase").addClass("showcase-hide")
 
 
 # Turbolink workaround
