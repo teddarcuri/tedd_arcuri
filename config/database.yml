@@ -31,7 +31,7 @@ test:
 
 production:
   adapter: postgresql
-  encoding: unicode
+  encoding: utf8
   database: tedd_arcuri_production
   pool: 5
   username: root
