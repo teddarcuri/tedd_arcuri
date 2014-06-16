@@ -38,7 +38,7 @@
     font-size: 20em;
     font-weight: 700;
     @include bp(beta){
-        margin-bottom: 50px; 
+        margin-bottom: 10px; 
     }
     .me-with-e {
         width: 47%;
@@ -58,5 +58,8 @@
     @include bp(beta) {
         padding: 0px;
         width: 100% !important;
+        .typed {
+            display: none;
+        }
     }
 }
