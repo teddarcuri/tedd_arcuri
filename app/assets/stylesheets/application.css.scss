@@ -105,12 +105,33 @@ nav {
     }
 }
 
-.mobile-nav-toggle {
+.mobile-nav-open {
     display: none;
     height: 30px; width: 30px;
     margin: 20px;
     background: image-url("nav-icon.svg") no-repeat center center;
     background-size: contain;
+    @include bp(900) {
+        display: inline-block;
+    }
+}
+
+.mobile-nav-close {
+    position: absolute;
+    top: 10px; right: 10px;
+    background: $slate;
+    border: solid 3px transparent;
+    padding: 9px 12px;
+    border-radius: $border-radius / 2;
+    cursor: pointer;
+    display: none;
+    @include transition(all ease 0.5s);
+    &:hover {
+        border: solid 3px $slate;
+        background: transparent;
+        border-radius: 200%;
+        @include transition(all ease 0.5s);
+    }
     @include bp(900) {
         display: inline-block;
     }
@@ -135,6 +156,14 @@ ul.navigation {
             width: 100%;
             text-align: center;
             @include align-items(stretch);
+            @for $i from 1 through 5 {
+                &:nth-child(#{$i}) {
+                    background: darken($salmon, $i * 3) !important;
+                }
+            }
+            &:hover {
+                background: darken($salmon, 15%) !important;
+            }
         }
         a {
             cursor: pointer;
@@ -145,14 +174,16 @@ ul.navigation {
             margin: 0px 20px;
             border-bottom: solid 2px transparent;
             text-shadow: 1px 1px 2px #000;
+            &:hover {
+                border-bottom: solid 2px $salmon;
+            }
             @include bp(900){
                 width: 100%;
                 font-size: 1.25em;
-                padding: 30px;
-                border-bottom: solid 1px darken($salmon, 10%);
-            }
-            &:hover {
-                border-bottom: solid 2px $salmon;
+                &:hover {
+                    border-bottom: solid 2px transparent !important;
+                }
+
             }
         }
     }

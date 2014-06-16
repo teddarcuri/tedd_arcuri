@@ -1,6 +1,7 @@
 <nav>
 	<%= link_to " ", root_path, id: "logo" %>
 	<div class="nav-container">
+		<div class="mobile-nav-close">X</div>
 		<ul class="navigation">
 			<li><%= link_to "Me, The Person", {controller: "pages", action: "about"} %></li>
 			<li><%= link_to "My Work", projects_path %></li>
@@ -18,6 +19,6 @@
 		</ul>
 	</div>
 
-	<div class="mobile-nav-toggle">
+	<div class="mobile-nav-open">
 	</div>
 </nav>

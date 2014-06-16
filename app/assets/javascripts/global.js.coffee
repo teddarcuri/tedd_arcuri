@@ -20,8 +20,12 @@ $(".close-overlay").click ->
 	$(".overlay").delay(200).fadeOut()
 
 # Nav toggle
-$(".mobile-nav-toggle").click ->
-	$(".nav-container").toggleClass("open")
+$(".mobile-nav-open").click ->
+	$(".nav-container").addClass("open")
+
+# Nav toggle
+$(".mobile-nav-close").click ->
+	$(".nav-container").removeClass("open")
 
 # Turbolink workaround
 $(document).ready(global)
