@@ -1,6 +1,6 @@
 global = ->
 # Fade Out the loading gif
-$(".loading-overlay").fadeOut();
+$(".loading-overlay").delay(500).fadeOut();
 
 #notices
 $(".notice").animate({"bottom" : 0}, 1000).delay(4000).animate({"bottom" : -150}, 1000)
