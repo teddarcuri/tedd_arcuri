@@ -75,7 +75,6 @@ $(".controls").on "click", "a", ->
 $(".showcase-close").on "click", ->
 	$(".showcase").addClass("showcase-hide")
 
-
 # Turbolink workaround
 $(document).ready(project)
 $(document).on('page:load', project)

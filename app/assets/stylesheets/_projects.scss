@@ -288,7 +288,10 @@
 	border-radius: $border-radius / 3;
 	z-index: $z-modal + 50;
 	font-size: 0.5em;
+	@include transition(all ease 0.2s);
 	&:hover {
+		@include transition(all ease 0.2s);
+		border-radius: 200%;
 		background: $salmon;
 	}
 }

@@ -64,7 +64,10 @@ $z-nav: 999;
 		padding: 10px 12px;
 		border-radius: $border-radius / 2;
 		font-size: 0.5em;
+		@include transition(all ease 0.2s);
 		&:hover {
+			@include transition(all ease 0.2s);
+			border-radius: 200%;
 			background: $salmon;
 		}
 	}

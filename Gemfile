@@ -13,6 +13,7 @@ gem 'bcrypt-ruby', '~> 3.1.5'
 gem 'slick_rails'
 gem 'tinymce-rails'
 gem 'masonry-rails'
+gem 'aws-sdk'
 
 group :development do
 	gem 'mysql2'
