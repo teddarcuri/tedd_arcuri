@@ -28,4 +28,11 @@ $(function(){
     	strings: ["^250 Hello, my name is"],
     	typeSpeed: 100
     });
-}).delay(2000);
+});
+
+$(".projects-container").isotope({
+	itemSelector: '.project-shell',
+  	layoutMode: 'fitRows'
+});
+
+

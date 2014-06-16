@@ -57,9 +57,7 @@ $(".edit-showcase-toggle").on "click", ->
 			$(".showcase-close").on "click", ->
 				$(".showcase").addClass("showcase-hide")
 	
-# Isotope
-$(".projects-container").isotope ->
-  	itemSelector: '.project',
+  
 
 $(".controls").on "click", "a", ->
 	filterValue = $(this).attr('data-filter')
