@@ -1,5 +1,6 @@
 .projects-container {
 	padding-bottom: 120px;
+	width: 100%;
 	@include display(flex);
 	@include flex-wrap(wrap);
 	@include justify-content(space-between);
@@ -53,7 +54,7 @@
 }
 
 .project-shell {
-	width: 24.99%; height: auto;
+	width: 24.5%; height: auto;
 	padding: 20px;
 	@include bp(1600){ width: 33%; }
 	@include bp(1300){ width: 50%; }

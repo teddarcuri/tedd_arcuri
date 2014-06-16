@@ -19,3 +19,13 @@
 //= require masonry/jquery.imagesloaded.min
 //= require jquery.isotope.js
 //= require_tree .
+
+ $(".headline").fitText();
+  $(".name").fitText(0.3);
+
+	$(function(){
+	    $(".headline").typed({
+	    	strings: ["Hello, my name is"],
+	    	typeSpeed: 100
+	    });
+	});
