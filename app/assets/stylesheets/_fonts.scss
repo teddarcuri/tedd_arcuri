@@ -48,8 +48,11 @@ li {
     color: #fff;
     font-size: 1.25em;
     font-weight: 700;
-    letter-spacing: 7px;
+    letter-spacing: 2px;
     text-transform: uppercase;
+    @include bp(beta) {
+        font-size: 1em;
+    }
 }
 
 .button {

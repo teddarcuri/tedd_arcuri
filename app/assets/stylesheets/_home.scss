@@ -10,7 +10,7 @@
         margin: auto;
         padding: 0px;
         text-align: center;
-        top: 0;
+        top: 20px;
     }
 }
 
@@ -37,6 +37,9 @@
     text-transform: uppercase;
     font-size: 20em;
     font-weight: 700;
+    @include bp(beta){
+        margin-bottom: 50px; 
+    }
     .me-with-e {
         width: 47%;
         margin: 4.5% -14% 0 -14%;
