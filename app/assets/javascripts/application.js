@@ -25,7 +25,7 @@ $(".name").fitText(0.3);
 
 $(function(){
     $(".headline").typed({
-    	strings: ["Hello, my name is"],
+    	strings: ["^250 Hello, my name is"],
     	typeSpeed: 100
     });
-});
+}).delay(2000);

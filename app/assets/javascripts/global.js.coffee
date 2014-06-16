@@ -1,4 +1,7 @@
 global = ->
+# Fade Out the loading gif
+$(".loading-overlay").fadeOut();
+
 #notices
 $(".notice").animate({"bottom" : 0}, 1000).delay(4000).animate({"bottom" : -150}, 1000)
 
@@ -19,7 +22,6 @@ $(".close-overlay").click ->
 # Nav toggle
 $(".mobile-nav-toggle").click ->
 	$(".nav-container").toggleClass("open")
-
 
 # Turbolink workaround
 $(document).ready(global)
