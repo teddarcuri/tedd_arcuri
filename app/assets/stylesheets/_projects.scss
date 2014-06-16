@@ -14,12 +14,15 @@
 	@include flex-wrap(wrap);
 	@include justify-content(space-between);
 	margin-bottom: 50px;
-	@include bp(alpha){
+	@include bp(1400){
 		padding-top: 50px;
 		h1 {
 			margin-bottom: 20px;
 			width: 100%;
 		}
+	}
+	@include bp(charlie){
+		padding-top: 10px;
 	}
 	h1 {
 		span {
@@ -63,7 +66,7 @@
 	padding: 20px;
 	@include bp(1600){ width: 33%; }
 	@include bp(1300){ width: 49%; }
-	@include bp(700){ width: 95%; }
+	@include bp(700){ width: 100%; padding: 10px; }
 }
 
 .project {
