@@ -109,6 +109,10 @@
 			bottom: 0;
 		}
 	}
+	@include bp(charlie) {
+		background-size: contain !important;
+		height: 300px;
+	}
 
 	.project-info {
 		background: rgba(0,0,0,0.95);
