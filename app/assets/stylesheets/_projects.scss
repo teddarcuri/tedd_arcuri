@@ -102,11 +102,12 @@
 	.slideshow {
 		height: 100%; width: 100%;
 		position: relative;
+		display: block;
 		&:hover {
 			.slick-prev, .slick-next {
 				display: block !important;
 				&:hover {
-					background: transparent;
+					background: rgba(0,0,0,0.3);
 				}
 			}
 		}
@@ -121,10 +122,12 @@
 
 		.slick-slide {
 			height: 100% !important;
+			display: block;
 		}
 
 		.slick-prev, .slick-next {
 			display: none !important;
+
 		}
 	}
 }
