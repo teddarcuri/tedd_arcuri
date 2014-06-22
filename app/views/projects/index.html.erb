@@ -26,7 +26,17 @@
 		<% @projects.each do |project| %>
 		<div class="project-shell <%= project.kind.downcase %>">
 			<div id="<%= dom_id(project) %>" class="project">
-				<div class="project-photo" style="background: url(<%= project.image.url(:original) %>) no-repeat center center">
+				<div class="project-photo" style="background: url() no-repeat center center">
+					<div class="slideshow">
+						<% if project.assets %>
+						<% project.assets.each do |asset| %>
+							<div>
+								<%= image_tag asset.image.url(:original) %>
+							</div>
+						<% end %>
+					<% end %>
+					</div>
+
 					<% if logged_in %>
 					<div class="project-order">
 						<%= project.order %>
@@ -55,8 +65,6 @@
 		<% end %>
 	</div>
 </div>
-
-<footer></footer>
 
 <%= render 'projects/project_showcase' %>
 	

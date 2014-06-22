@@ -4,7 +4,7 @@
 
 project = ->
 # View Portfolio piece 
-$(".view-project, .project-photo").on "click", ->
+$(".view-project").on "click", ->
 	$(".project-showcase").removeClass("showcase-hide")
 	# Ajax Call For Project Showcase
 	id = $(this).closest('.project').attr('id').match(/\d+/)
@@ -16,6 +16,8 @@ $(".view-project, .project-photo").on "click", ->
 			$(".slideshow").slick({
 				dots: true, 
 				speed: 500,
+				autoplay: true,
+				autoplaySpeed: 7000,
 				responsive: [
 				    {
 				      breakpoint: 900,
@@ -67,6 +69,19 @@ $(".controls").on "click", "a", ->
 #hide showcases
 $(".showcase-close").on "click", ->
 	$(".showcase").addClass("showcase-hide")
+# Project photo carousel
+$(".slideshow").slick({
+	speed: 500,
+	autoplay: true,
+	autoplaySpeed: 5000,
+	responsive: [
+	    {
+	      breakpoint: 900,
+	      settings: {
+	        arrows: false,
+	      }
+	    }]	
+})
 
 # Turbolink workaround
 $(document).ready(project)
