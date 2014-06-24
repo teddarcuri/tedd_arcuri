@@ -3,7 +3,7 @@
 	<!-- Control Bar | Sort, Admin CRUD, etc. -->
 	<div class="control-bar">
 		<% if !logged_in %>
-			<h1>My Work <span>Click the <%= image_tag("eye.svg") %> icon to view more pictures and details.</span></h1>
+			<h1>My Work <span class="mobile">Swipe the photos <%= image_tag("swipe.svg") %> left and right to see more.</span><span>Click the <%= image_tag("eye.svg") %> icon to view large images and project details.</span></h1>
 		<% else %>
 			<h1>Admin Panel</h1>
 		<% end %>

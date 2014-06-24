@@ -23,6 +23,7 @@ $(".view-project").on "click", ->
 				      breakpoint: 900,
 				      settings: {
 				        arrows: false,
+				        slidesToShow: 1,
 				      }
 				    }]	
 			})
