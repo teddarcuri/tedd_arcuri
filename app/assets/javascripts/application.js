@@ -35,4 +35,15 @@ $(".projects-container").isotope({
   	layoutMode: 'fitRows'
 });
 
+$(".chart").easyPieChart({
+	barColor: "#ffffff",
+	trackColor: false,
+	scaleColor: false,
+	scaleLength: 0,
+	lineCap: 'butt',
+	lineWidth: 2,
+	size: 40,
+	animate: 1200
+});
+
 
