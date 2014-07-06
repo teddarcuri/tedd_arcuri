@@ -37,13 +37,14 @@ $(".projects-container").isotope({
 
 $(".chart").easyPieChart({
 	barColor: "#ffffff",
-	trackColor: false,
+	trackColor: "#b45649",
 	scaleColor: false,
 	scaleLength: 0,
-	lineCap: 'butt',
-	lineWidth: 2,
+	lineCap: 'square',
+	lineWidth: 4,
 	size: 40,
-	animate: 1200
+	animate: 2500
 });
+
 
 

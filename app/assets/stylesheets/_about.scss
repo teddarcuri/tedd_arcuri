@@ -1,7 +1,7 @@
 .charts {
 	margin: auto;
 	display: block;
-	background: darken($salmon, 7%);
+	background: darken($salmon, 10%);
 	position: relative;
 	padding: 20px;
 	h3 {
@@ -69,7 +69,7 @@
 	}
 	h1 {
 		color: darken($salmon, 10%);
-		margin: 20px;
+		margin: 30px;
 		@include bp(charlie) {
 			font-size: 2em;
 			margin: 10px 20px;
@@ -84,7 +84,7 @@
 		border-bottom: solid 2px darken($salmon, 5%);
 		@include transition(all ease 0.2s);
 		&:hover {
-			background: image-url("arrow.svg") no-repeat 20px center darken($salmon, 10%);
+			background: image-url("arrow.svg") no-repeat 20px center darken($salmon, 12%);
 			background-size: 10px;
 			@include transition(all ease 0.2s);
 		}
@@ -103,7 +103,7 @@
 		div {
 			display: none;
 			background: darken($salmon, 10%);
-			padding: 50px;
+			padding: 20px 30px;
 			@include bp(1200) {
 				padding: 20px;
 				font-size: 1.2em;
